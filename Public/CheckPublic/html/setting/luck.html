@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/luck.css" />
+</head>
+
+<body>
+    <div id="luck">
+        <header>
+            <span class="back"><i></i></span>
+            <div>我的活动</div>
+        </header>
+        <div class="toA">新的抽奖已开始，赶紧来参加!!</div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="left">
+                        <div class="title fs16">获得奖品：1积分</div>
+                        <div class="desc clear">
+                            <span class="fl fs12">参与时间：2017-05-04&nbsp;10:22</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="title fs16">获得奖品：10元优惠券</div>
+                        <div class="desc clear">
+                            <span class="fl fs12">参与时间：2017-05-04&nbsp;10:22</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="title fs16">获得奖品：50元现金红包</div>
+                        <div class="desc clear">
+                            <span class="fl fs12">参与时间：2017-05-04&nbsp;10:22</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('header .back').click(function(){
+        window.history.go(-1);
+            });
+            $('.toA').click(function(){
+                window.location.href = 'activity.html';
+            });
+        })
+    </script>
+</body>
+
+</html>

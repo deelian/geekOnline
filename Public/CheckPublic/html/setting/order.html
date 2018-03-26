@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/order.css" />
+</head>
+
+<body>
+    <div id="order">
+        <header>
+            <span class="back"><i></i></span>
+            <div>我的订单</div>
+        </header>
+        <div class="content">
+            <ul>
+                <li class="close">
+                    <div class="left">
+                        <div class="title fs16">购买课程《过节发放购物卡的“财于税”》</div>
+                        <div class="desc clear">
+                            <span class="fl fs12">2017-05-04&nbsp;10:22</span>
+                            <span class="fl fs12 active2">已关闭</span>
+                            <span class="fr orange">￥66</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="noPay">
+                    <div class="left">
+                        <div class="title fs16">购买培训班《2017出口退税风险实务及风险操作》</div>
+                        <p class="time clr9">付款剩余时间：<span class="timeSpan"></span></p>
+                        <div class="desc clear">
+                            <span class="fl fs12">2017-05-04&nbsp;10:22</span>
+                            <span class="fl fs12 active2">待支付</span>
+                            <button>立即支付</button>
+                            <span class="fr orange">￥66</span>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var time = 172800;
+            setInterval(function() {
+                var hour = parseInt(time / 60 / 60);
+                var minute = parseInt(time / 60 % 60);
+                var seconds = parseInt(time % 60);
+                time -= 1;
+                $('.timeSpan').html(hour + "小时" + minute + "分钟" + seconds + "秒");
+            }, 1000);
+            $('header .back').click(function(){
+        window.history.go(-1);
+      });
+            $('li.close').each(function(){
+              $(this).on('click',function(){
+                window.location.href = 'orderDetail.html';
+              })
+            });
+            $('li.noPay').each(function(){
+              $(this).on('click',function(){
+                window.location.href = 'orderPay.html';
+              })
+            });
+        })
+    </script>
+</body>
+
+</html>

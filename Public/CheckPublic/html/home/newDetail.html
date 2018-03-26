@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/newDetail.css" />
+</head>
+<body>
+  <div id="new">
+    <header>
+      <span class="back"><i></i></span>
+      <span class="comment">评论</span>
+      <span class="store">收藏</span>
+      <div>新闻详情</div>
+    </header>
+    <div class="content">
+      <div class="title">
+        <p>当税遇见科技--工业4.0的税务影响</p>
+        <div class="day">
+          <span>财税动态</span>
+          <span>1小时前</span>
+          <span class="fr"><i></i>205</span>
+        </div>
+      </div>
+      <div class="desc">
+        <p style="text-indent:2em">工业4.0的发展提高了供应链的生产力和敏捷度，不仅对制造业的发展产生着影响，还使企业面临着挑战。在这种环境下，企业在考虑工业4.0带来的机会时，管理运营成本，特别是与税收有关的成本，也是至关重要的。通过第一期话题，我们与您探讨了工业4.0的概念以及从工厂方面陈述了工业4.0技术带来的税收影响，本期我们将着眼于工业4.0驱动售后市场支持的一些税务方案。</p>
+        <p style="text-indent:2em">工业4.0的发展提高了供应链的生产力和敏捷度，不仅对制造业的发展产生着影响，还使企业面临着挑战。在这种环境下，企业在考虑工业4.0带来的机会时，管理运营成本，特别是与税收有关的成本，也是至关重要的。通过第一期话题，我们与您探讨了工业4.0的概念以及从工厂方面陈述了工业4.0技术带来的税收影响，本期我们将着眼于工业4.0驱动售后市场支持的一些税务方案。</p>
+      </div>
+      <div class="feel clear">
+        <div class="good fl"><i></i>0</div>
+        <div class="advice fr"><i></i>内容投诉</div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="title fs16">相关资讯</div>
+      <ul>
+        <li>
+            <div class="left">
+                <div class="tit fs16">申报最后一天~对照自查</div>
+                <div class="desc clear">
+                    <span class="fl fs12">中小企业财税</span>
+                    <span class="fl fs12">18个小时前</span>
+                    <span class="fr fs12"><i class="good"></i>0</span>
+                    <span class="fr fs12"><i class="look"></i>3k</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left">
+                <div class="tit fs16">申报最后一天~对照自查</div>
+                <div class="desc clear">
+                    <span class="fl fs12">中小企业财税</span>
+                    <span class="fl fs12">18个小时前</span>
+                    <span class="fr fs12"><i class="good"></i>0</span>
+                    <span class="fr fs12"><i class="look"></i>3k</span>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <div class="reply">
+      <div class="title fs16">评论</div>
+      <div class="content">
+        <ul>
+          <li>
+            <div class="logo fl"><i></i></div>
+            <div class="info fr">
+              <p class="name">小白2016</p>
+              <p class="time"><span>1楼</span><span>17小时前</span></p>
+              <p class="fs16">很不错的文章！</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo fl"><i></i></div>
+            <div class="info fr">
+              <p class="name">小白2016</p>
+              <p class="time"><span>1楼</span><span>17小时前</span></p>
+              <p class="fs16">很不错的文章！</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 评论框 -->
+  <div class="talk">
+    <div class="write">
+      <div>
+        <span class="quit clr9">取消</span>
+        <span class="publish fr">发布</span>
+      </div>
+      <textarea></textarea>
+    </div>
+  </div>
+  <script src="../../script/jquery.min.js"></script>
+  <script>
+    $(function(){
+      var flag = 0;
+      $('.comment').click(function(){
+        $('.talk').fadeIn();
+      });
+      $('.quit').click(function(){
+        $('.talk').fadeOut();
+      });
+      $('header .store').click(function(){
+        if(flag == 0){
+          $(this).text('已收藏').addClass('bgef');
+          flag = 1;
+        }else{
+          $(this).text('收藏').removeClass('bgef');
+          flag = 0;
+        }
+      });
+      $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    })
+  </script>
+</body>
+</html>

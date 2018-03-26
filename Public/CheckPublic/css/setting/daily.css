@@ -1,0 +1,18 @@
+body{height: 100%;background-color:#FEE8D0; }
+#daily header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background:#fff;z-index: 10;border-bottom: 1px solid #efefef;color:#fff;}
+#daily header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#daily header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#daily header div{width: 50%;margin: 0 auto;font-size: 16px;text-align: center;color:#333;}
+
+#daily .content{padding-top: 50px;}
+#daily .content .top{display: flex;display: -webkit-flex;justify-content: center;align-items: center;height: 200px;background-color: #EF5553;}
+.top .top-logo{width: 100px;height: 100px;border-radius: 100%;border: 10px solid #FFE6CD;display: flex;display: -webkit-flex;justify-content: center;flex-direction: column;background-color: #980DD8;}
+.top .top-logo div{text-align: center;color:#FEB439;font-size: 20px;}
+
+#daily .content .down{background-color: #FEE8D0;padding: 30px 10px;}
+.down .button{display: flex;display: -webkit-flex;justify-content: space-around;align-items: center;height: 100px;flex-direction: column;margin-bottom: 20px;}
+.down .button button{width: 200px;height: 50px;border-radius: 10px;background-color: #EF5553;border: 2px solid #CE353D;color:#fff;font-size: 20px;}
+.down .button button.succ{background-color: #cccccc;border: 1px solid #c1c1c1;}
+.down .explain{padding: 10px;border: 2px solid #EBD0B4;color:#666;}
+.down .explain p{margin-bottom: 10px;}
+

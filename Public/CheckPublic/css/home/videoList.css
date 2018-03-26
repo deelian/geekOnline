@@ -1,0 +1,16 @@
+#videoList header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background-color: #fff;z-index: 10;border-bottom: 1px solid #efefef;}
+#videoList header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#videoList header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#videoList header div{width: 40%;margin: 0 auto;text-align: center;font-size: 16px;}
+
+#videoList .section{padding: 10px;overflow: hidden;border-bottom: 10px solid #EEF1F6;padding-top:50px; }
+#videoList .section:last-child{border-bottom: 0;}
+#videoList .section .title{font-size: 16px;}
+#videoList .section .plate{height: 90px;padding-bottom: 10px;margin-top: 10px;}
+#videoList .section .plate .left{height: 100%;width: 30%;margin-right: 2%}
+#videoList .section .plate .left img{width: 100%;height: 100%;}
+#videoList .section .plate .right{height: 100%;width: 67%;}
+#videoList .section .plate .right .top{margin-bottom: 10px;font-size: 16px;}
+#videoList .section .plate .right .mid{margin-bottom: 10px;font-size: 14px;visibility: hidden;}
+#videoList .section .plate .right .down{color:#FF6734;font-size: 16px;}
+#videoList .section .plate .right .down span{font-size: 12px;color:#999;}

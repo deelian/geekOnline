@@ -1,0 +1,131 @@
+@charset "utf-8";
+/**
+ * Title：公共基础样式
+ * Time：2017/12/28
+ * Author：longmin
+ */
+
+/* 公共基础样式
+--------------------------------------*/
+html {font-size: 100px!important;}
+body {font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;font-size: 14px;color: #333;background: #fff;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, fieldset, legend, input, textarea, p, span, a, img, blockquote, th, td {margin: 0;padding: 0;}
+ol, ul, li {list-style: none;}
+h1, h2, h3, h4, h5, h6 {text-decoration: none;font-weight: normal;font-size: 100%;}
+textarea {resize: none;}
+input, button, select, textarea, img, fieldset {outline: 0;}
+input, textarea, select {font-size: 14px;}
+a {text-decoration: none;color: #333;}
+fieldset, img {border: 0;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td {text-align: left;}
+a, button, input {-webkit-tap-highlight-color: rgba(0,0,0,0);}
+input,textarea{-webkit-user-select:text;-ms-user-select:text;user-select:text;-webkit-appearance:none;}
+i, em{font-style: normal;text-decoration: none;}
+:focus {outline: 0;}
+*{box-sizing: border-box;}
+img{width:100%;}
+input{border:0;}
+body > div{height: 0%;}
+
+[class*="am-u-"] {padding-left:0rem;padding-right:0rem;}
+.am-slider-default{margin-bottom: 0px;}
+
+
+/* 媒体监听 */
+@media only screen and (min-width: 1024px){
+	.wrapper{
+		width:7.5rem!important;
+		margin: 0 auto;
+	}
+	.suspension{
+		width:7.5rem!important;
+	}
+}
+
+
+/* 复选框 */
+input[type="checkbox"],input[type="radio"]{
+	position:relative;
+	width:0.21rem;
+	height:0.21rem;
+	background-color:#fff;
+	border:.01rem solid #999;
+	/*-webkit-border-radius:20%;
+	border-radius: 20%;*/
+	vertical-align:text-bottom}
+input[type="checkbox"]:checked,input[type="radio"]:checked{
+	border-color:#df2d31;
+	background-color:#df2d31;
+	border:0.01rem solid #df2d31!important;}
+input[type="checkbox"]:checked:after,input[type="radio"]:checked:after{
+	content: '';
+    position: absolute;
+    left: .02rem;
+    top: .01rem;
+    width: .16rem;
+    height: .1rem;
+    border-left: .02rem solid white;
+    border-bottom: .02rem solid white;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 清浮动 */
+.clear{clear:both;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}  /*IE/7/6*/
+
+.bd-bg{background: #eee;}
+.bd-bg-2{background: #fff;}
+
+
+/* input、textarea的placeholders属性提示字体大小及颜色 */
+textarea::-webkit-input-placeholder {color: #bababa;}
+textarea:-moz-placeholder {color: #bababa;}
+textarea::-moz-placeholder {color: #bababa;}
+textarea:-ms-input-placeholder {color: #bababa;}
+
+input::-webkit-input-placeholder {color: #bababa;}
+input:-moz-placeholder {color: #bababa;}
+input::-moz-placeholder {color: #bababa;}
+input:-ms-input-placeholder {color: #bababa;}
+
+
+/* flex布局 */
+	/*垂直、水平布局*/
+.FX1{display: -webkit-flex;display: flex;}
+	/*换行*/
+.FX2{display: -webkit-flex;display: flex;flex-wrap:wrap;-webkit-flex-wrap: wrap;}
+	/*垂直居中*/
+.FX3{display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;}
+	/*水平居中*/
+.FX4{display: -webkit-flex;display: flex;-webkit-justify-content: center;justify-content: center;}
+	/*水平垂直居中*/
+.FX5{display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;} 
+	/*水平两端对齐、垂直居中*/
+.FX6{display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: space-between;justify-content: space-between;} 
+	/*水平两端对齐*/
+.FX7{display: -webkit-flex;display: flex;-webkit-justify-content: space-between;justify-content: space-between;}
+
+.FX-vert1{-webkit-align-items: flex-start;align-items: flex-start;}
+.FX-vert2{-webkit-align-items: center;align-items: center;}
+.FX-vert3{-webkit-align-items: flex-end;align-items: flex-end;}
+
+.FX-hori1{-webkit-justify-content: flex-start;justify-content: flex-start;}
+.FX-hori2{-webkit-justify-content: center;justify-content: center;}
+.FX-hori3{-webkit-justify-content: flex-end;justify-content: flex-end;}
+.FX-hori4{-webkit-justify-content: space-between;justify-content: space-between;}
+.FX-hori5{-webkit-justify-content: space-around;justify-content: space-around;}
+
+
+
+
+
+
+
+
+
+
+

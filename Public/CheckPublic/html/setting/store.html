@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/store.css" />
+</head>
+
+<body>
+    <div id="store">
+        <header>
+            <span class="back"><i></i></span>
+            <div>我的收藏</div>
+        </header>
+        <div class="content">
+        <div class="tab">
+        <span class="cur">资讯</span>
+        <span>商品</span>
+      </div>
+            <div class="show">
+        <div class="move">
+          <div class="mod a0">
+            <div class="video clear">
+              <ul>
+              <li>
+                  <div class="left fl">
+                      <div class="title">申报最后一天~对照自查</div>
+                      <div class="desc clear">
+                          <span class="fl fs12">中小企业财税</span>
+                          <span class="fr fs12"><i class="good"></i>0</span>
+                          <span class="fr fs12"><i class="look"></i>3k</span>
+                      </div>
+                  </div>
+                  <div class="right fr"><img src="../../image/news.jpg" alt=""></div>
+              </li>
+              <li>
+                  <div class="left fl">
+                      <div class="title">申报最后一天~对照自查</div>
+                      <div class="desc clear">
+                          <span class="fl fs12">中小企业财税</span>
+                          <span class="fr fs12"><i class="good"></i>0</span>
+                          <span class="fr fs12"><i class="look"></i>3k</span>
+                      </div>
+                  </div>
+                  <div class="right fr"><img src="../../image/news.jpg" alt=""></div>
+              </li>
+              <li>
+                  <div class="left fl">
+                      <div class="title">申报最后一天~对照自查</div>
+                      <div class="desc clear">
+                          <span class="fl fs12">中小企业财税</span>
+                          <span class="fr fs12"><i class="good"></i>0</span>
+                          <span class="fr fs12"><i class="look"></i>3k</span>
+                      </div>
+                  </div>
+                  <div class="right fr"><img src="../../image/news.jpg" alt=""></div>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <div class="mod a1">
+            <div class="mods clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="sub">积分抵减</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mods clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="spe">积分专属商品</button>
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('#store .content .show').css('height', $('.a0').outerHeight());
+        $('#store .content .mod').each(function(i) {
+            $(this).css('left',$(document.body).width()*i);
+        });
+        $('#store .tab span').each(function(i){
+          var j = 'a' + i;
+          
+          $(this).on('click', function() {
+              $('.move').animate({
+                  left: -$(document.body).width() * i
+              });
+              $("#store .tab span").eq($(this).index()).addClass("cur").siblings().removeClass("cur");
+              $('#store .content .show').css('height', $('.' + j).outerHeight());
+          });
+        });
+
+        $('header .back').click(function(){
+        window.history.go(-1);
+      });
+        $('#store .content .a0 li').each(function(){
+          $(this).on('click',function(){
+            window.location.href = '../home/newDetail.html';
+          })
+        });
+        $('#store .content .a1 .mods').each(function(){
+          $(this).on('click',function(){
+            window.location.href = '../shop/detail.html';
+          })
+        });
+      })
+    </script>
+</body>
+
+</html>

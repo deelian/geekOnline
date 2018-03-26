@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/category.css" />
+</head>
+<body>
+  <div id="category">
+    <header>
+      <span class="back"><i></i></span>
+      <div>问题分类：类别一</div>
+    </header>
+    <div class="content">
+      <div class="mod">
+         <p class="ellipsis2">不得抵扣的固定资产发生用途改变用于允许抵扣进项税额的应税项目，如何抵扣进项税额？</p>
+           <span>2016-09-30&nbsp;09:30</span>
+          </div>
+        <div class="mod">
+           <p class="ellipsis2">不得抵扣的固定资产发生用途改变用于允许抵扣进项税额的应税项目，如何抵扣进项税额？</p>
+            <span>2016-09-30&nbsp;09:30</span>
+        </div>
+    </div>
+  </div>
+  <script src="../../script/jquery.min.js"></script>
+  <script>
+    $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('#category .content .mod').each(function() {
+                $(this).on('click', function() {
+                    window.location.href = 'problem.html';
+                });
+    });
+  </script>
+</body>
+</html>

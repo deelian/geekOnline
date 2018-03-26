@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>开发</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/loginPage.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    
+</head>
+<body>
+  <div id="reg">
+    <header>
+      <span class="back"><i></i></span>
+      <div>注册</div>
+    </header>
+    <div class="content">
+      <div class="in">
+        <input type="text" name="phone" placeholder="请输入手机号"><button>获取验证码</button>
+        <input type="text" name="check" placeholder="请输入验证码">
+        <input type="password" name="pwd" placeholder="请设置密码">
+      </div>
+      <button class="reg">注册</button>
+      <div class="tit">
+        <input type="checkbox" id="sure" style="vertical-align:middle;" checked="checked"><label for="sure" style="vertical-align:middle;">我已阅读并同意</label><span style="color:#FF6734;">《渝税网用户协议》</span>
+      </div>
+    </div>
+  </div>
+  <script src="../../script/jquery.min.js"></script>
+  <script>
+  $('header .back').click(function(){
+        window.history.go(-1);
+      });
+  $('.reg').click(function(){
+    window.location.href = 'login.html'
+  })
+  </script>
+</body>
+</html>

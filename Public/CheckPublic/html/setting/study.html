@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/study.css" />
+</head>
+
+<body>
+    <div id="study">
+        <header>
+            <span class="back"><i></i></span>
+            <div>我的学习</div>
+        </header>
+        <div class="content">
+            <div class="tab">
+                <span class="active">培训</span>
+                <span>网课</span>
+                <span>直播</span>
+            </div>
+            <div class="show">
+                <div class="move">
+                    <div class="mod a0">
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke1.jpg" alt=""></div>
+                            <div class="right fr fs16">广东省税务操作视频</div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke2.jpg" alt=""></div>
+                            <div class="right fr fs16">福利来袭！新时代下的发票攻略</div>
+                        </div>
+                    </div>
+                    <div class="mod a1">
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke1.jpg" alt=""></div>
+                            <div class="right fr fs16">广东省税务操作视频</div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke2.jpg" alt=""></div>
+                            <div class="right fr fs16">福利来袭！新时代下的发票攻略</div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke1.jpg" alt=""></div>
+                            <div class="right fr fs16">广东省税务操作视频</div>
+                        </div>
+                    </div>
+                    <div class="mod a2">
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke1.jpg" alt=""></div>
+                            <div class="right fr fs16">广东省税务操作视频</div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl"><img src="../../image/wangke2.jpg" alt=""></div>
+                            <div class="right fr fs16">福利来袭！新时代下的发票攻略</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#study .content .show').css('height', $('.a0').outerHeight());
+
+            $('#study .content .mod').each(function(i) {
+                $(this).css('left', $(document.body).width() * i);
+            });
+            $('#study .tab span').each(function(i) {
+                $(this).on('click', function() {
+                    var j = 'a' + i;
+                    $('#study .content .show').css('height', $('.' + j).outerHeight());
+                    $('.move').animate({
+                        left: -$(document.body).width() * i
+                    });
+                    $("#study .tab span").eq($(this).index()).addClass("active").siblings().removeClass("active");
+                });
+            });
+            $('header .back').click(function(){
+        window.history.go(-1);
+      });
+            $('#study .a0 .video').each(function(){
+              $(this).on('click',function(){
+                window.location.href = '../home/teach.html';
+              })
+            });
+            $('#study .a1 .video').each(function(){
+              $(this).on('click',function(){
+                window.location.href = '../home/video.html';
+              })
+            })
+        })
+    </script>
+</body>
+
+</html>

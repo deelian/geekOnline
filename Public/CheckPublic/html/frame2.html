@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>开发</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/loginPage.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+</head>
+<body>
+    <div id="login">
+      <div class="pic">
+        <div class="logo" onclick="toLogin();">
+          <span>立即登录</span>
+        </div>
+      </div>
+      <ul>
+        <li onclick="myStudy();">
+          <i class="study"></i>
+          <span>我的学习</span>
+          <span class="fr">></span>
+        </li>
+        <li onclick="myQue();">
+          <i class="question"></i>
+          <span>我的提问</span>
+          <span class="fr">></span>
+        </li>
+        <li onclick="myStore();">
+          <i class="store"></i>
+          <span>我的收藏</span>
+          <span class="fr">></span>
+        </li>
+        <li onclick="myOrder();">
+          <i class="pay"></i>
+          <span>我的订单</span>
+          <span class="fr">></span>
+        </li>
+      </ul>
+      <ul>
+        <li onclick="myInfo();">
+          <i class="set"></i>
+          <span>我的设置</span>
+          <span class="fr">></span>
+        </li>
+        <li onclick="myAdvice();">
+          <i class="advice"></i>
+          <span>意见反馈</span>
+          <span class="fr">></span>
+        </li>
+      </ul>
+    </div>
+    <script src="../../script/api.js"></script>
+    <script>
+    function toLogin() {
+        api.openWin({
+            name: 'login',
+            url: './mine/login.html',
+            pageParam: {
+                name: 'login'
+            }
+        });
+    }
+    function myStudy(){
+      api.openWin({
+          name: 'study',
+          url: './setting/study.html',
+          pageParam: {
+              name: 'study'
+          }
+      });
+    }
+    function myQue(){
+      api.openWin({
+          name: 'question',
+          url: './setting/question.html',
+          pageParam: {
+              name: 'question'
+          }
+      });
+    }
+    function myStore(){
+      api.openWin({
+          name: 'store',
+          url: './setting/store.html',
+          pageParam: {
+              name: 'store'
+          }
+      });
+    }
+    function myOrder(){
+      api.openWin({
+          name: 'order',
+          url: './setting/order.html',
+          pageParam: {
+              name: 'order'
+          }
+      });
+    }
+    function myAdvice(){
+      api.openWin({
+          name: 'advice',
+          url: './setting/advice.html',
+          pageParam: {
+              name: 'advice'
+          }
+      });
+    }
+    function myInfo(){
+      api.openWin({
+          name: 'info',
+          url: './setting/info.html',
+          pageParam: {
+              name: 'info'
+          }
+      });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+#store header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background:#fff;z-index: 10;border-bottom: 1px solid #efefef;}
+#store header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#store header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#store header div{width: 50%;margin: 0 auto;font-size: 16px;text-align: center;}
+
+#store .content{padding: 10px;padding-top: 60px;width: 100%;box-sizing: border-box;}
+#store .content .tab{width: 100%;border-bottom: 5px solid #efefef;height:30px;line-height: 30px;text-align: center;padding-bottom: 10px;}
+#store .content .tab span{width: 20%;text-align: center;}
+#store .content .show{overflow: hidden;}
+#store .content .show .move{width: 200%;position: relative;}
+#store .content .show .move .mod{padding: 10px 0;box-sizing: border-box;width: 50%;position: absolute;top: 0;}
+
+#store .content li{width: 100%;height:100px; border-bottom: 1px solid #efefef;padding: 10px;box-sizing: border-box;}
+#store .content li:last-child{border-bottom: 0;}
+#store .content li .left{width: 70%;height:100%;}
+#store .content li .left span{color:#666;}
+#store .content li .left span.fr{margin-right: 15px;}
+#store .content li .left span i{margin-right: 2px;}
+#store .content li .left span .good{display: inline-block;width: 20px;height: 15px;background: url(../../icon/news.png) no-repeat center right;vertical-align: middle;}
+#store .content li .left span .look{display: inline-block;width: 20px;height: 15px;background: url(../../icon/news.png) no-repeat center left;vertical-align: middle;}
+#store .content li .left .title{height: 60px;}
+#store .content li .right{width: 29%;height: 100%;}
+
+#store .a1 .mods{margin-bottom: 10px;width: 100%;background-color: #fff;}
+#store .a1 .mods:last-child{margin-bottom: 0;border-bottom: 0;}
+#store .a1 .mods .left{width: 40%;height: 150px;transform:scale(0.9,0.9);-ms-transform:scale(0.9,0.9);-moz-transform:scale(0.9,0.9);-webkit-transform:scale(0.9,0.9);-o-transform:scale(0.9,0.9);}
+#store .a1 .mods .right{text-align: left;width: 60%;padding:10px 0 0 15px;box-sizing: border-box;}
+#store .a1 .mods .right .title{font-size: 20px;color:#50B1EE;margin-bottom: 10px;}
+#store .a1 .mods .right .desc{font-size: 14px;color:#999;margin-bottom: 3px;}
+#store .a1 .mods .right button{padding: 5px 10px;border: 1px solid #FF6633;color:#FF6633;border-radius: 5px;outline: 0;margin: 10px 10px 0 0;}

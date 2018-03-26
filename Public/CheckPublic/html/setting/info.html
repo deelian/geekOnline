@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/info.css" />
+</head>
+
+<body>
+    <div id="info">
+        <header>
+            <span class="back"><i></i></span>
+            <div>个人资料</div>
+        </header>
+        <div class="content">
+          <ul>
+            <li class="clear ">
+              <span>头像</span>
+              <span class="more"></span>
+              <i class="fr"></i>
+            </li>
+            <li class="clear b male">
+              <span>身份</span>
+              <span class="txt fr">会计</span>
+              <span class="more"></span>
+            </li>
+            <li class="clear a">
+              <span>昵称</span>
+              <span class="txt fr">财税小白</span>
+              <span class="more"></span>
+            </li>
+            <li class="clear c sex">
+              <span>性别</span>
+              <span class="txt fr">男</span>
+              <span class="more"></span>
+            </li>
+            <li class="clear a">
+              <span>年龄</span>
+              <span class="txt fr">50</span>
+              <span class="more"></span>
+            </li>
+            <li class="clear a">
+              <span>手机号</span>
+              <span class="txt fr">123456789</span>
+              <span class="more"></span>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="check">
+    <div class="identity">
+      <div class="tit">
+        <span class="cancel">取消</span>
+        <span class="sure">保存</span>
+      </div>
+      <div class="male">
+        <input type="radio" name="sex" id="male" value="男"/>
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="female" value="女"/>
+        <label for="female">女</label>
+      </div>
+    </div>
+    <div class="job">
+      <div class="tit">
+        <span class="cancel">取消</span>
+        <span class="sure">保存</span>
+      </div>
+      <div class="male">
+        <input type="radio" name="job" id="accounting" value="会计"/>
+        <label for="accounting">会计</label>
+        <input type="radio" name="job" id="teacher" value="教师"/>
+        <label for="teacher">教师</label>
+        <input type="radio" name="job" id="civil" value="公务员"/>
+        <label for="civil">公务员</label>
+        <input type="radio" name="job" id="free" value="自由职业"/>
+        <label for="free">自由职业</label>
+      </div>
+    </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $('.b').click(function(){
+        $('.check').show();
+        $('.job').show();
+      });
+      $('.c').click(function(){
+        $('.check').show();
+        $('.identity').show();
+      });
+      $('.cancel').click(function(){
+        $('.check').hide();
+        $('.identity').hide();
+        $('.job').hide();
+      });
+      $('.identity .sure').click(function(){
+        $('.sex .txt').text($(".identity input[type='radio']:checked").val())
+        $('.check').hide();
+        $('.identity').hide();
+        $('.job').hide();
+      });
+      $('.job .sure').click(function(){
+        $('.male .txt').text($(".job input[type='radio']:checked").val())
+        $('.check').hide();
+        $('.identity').hide();
+        $('.job').hide();
+      });
+      $('header .back').click(function(){
+        window.history.go(-1);
+      });
+      $('#info .a').each(function(){
+          $(this).on('click',function(){
+            window.location.href = 'change.html';
+          })
+        })
+    })
+        
+    </script>
+</body>
+
+</html>

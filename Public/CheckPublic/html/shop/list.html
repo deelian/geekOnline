@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>商品列表</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/shop/list.css" />
+
+</head>
+
+<body>
+    <div id="list">
+        <header>
+            <span class="back"><i></i></span>
+            <div class="tab">
+                <span class="fs16">商品列表</span>
+            </div>
+        </header>
+        <div class="content">
+        <div class="mod clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="sub">积分抵减</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mod clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="spe">积分专属商品</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mod clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="spe">积分专属商品</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mod clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div>
+                    <button>积分抵减</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mod clear">
+            <div class="left fl"><img src="../../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <div class="tag">
+                    <button class="spe">积分专属商品</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $('header .back').click(function(){
+        window.history.go(-1);
+      });
+      $('.mod').each(function(){
+        $(this).on('click',function(){
+            window.location.href = 'detail.html';
+        })
+      })
+    </script>
+</body>
+
+</html>

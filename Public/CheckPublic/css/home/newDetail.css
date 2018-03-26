@@ -1,0 +1,50 @@
+#new header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background-color: #fff;z-index: 10;border-bottom: 1px solid #efefef;}
+#new header .back{position: absolute;left: 0;height: 100%;width: 50px;}
+#new header .back i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#new header .comment{background-color: #ff6734;color: #fff;border-radius: 5px;position: absolute;right: 5px;top:15px;height: 20px;line-height: 20px;padding: 0 5px;}
+#new header .store{background-color: #ff6734;color: #fff;border-radius: 5px;position: absolute;right: 55px;top:15px;height: 20px;line-height: 20px;padding: 0 5px;}
+#new header div{width: 40%;margin: 0 auto;text-align: center;font-size: 16px;}
+
+#new .content{padding: 10px;margin-top: 50px;width: 100%;box-sizing: border-box;border-bottom: 5px solid #efefef;}
+#new .content .title p{font-size: 22px;margin-bottom: 10px;}
+#new .content .title .day span{margin-right: 10px;color:#999;}
+#new .content .title .day span.fr{padding-left: 20px;}
+#new .content .title .day span i{display: inline-block;width: 25px;height: 20px;background-image: url(../../icon/news.png);background-repeat: no-repeat;background-position: left center;background-size: cover;vertical-align: middle;}
+
+#new .content .desc{margin-top: 20px;font-size: 16px;}
+#new .content .desc p{margin-bottom: 10px;line-height: 1.7;}
+#new .content .feel{margin-top: 20px;}
+#new .content .feel .good{width: 45%;height: 40px;line-height: 40px;text-align: center;border: 1px solid #efefef;}
+#new .content .feel .advice{width: 45%;height: 40px;line-height: 40px;text-align: center;border: 1px solid #efefef;}
+#new .content .feel .good i{display: inline-block;width: 25px;height: 20px;background-image: url(../../icon/news.png);background-repeat: no-repeat;background-position: right center;background-size: cover;vertical-align: middle;margin-right: 5px;}
+#new .content .feel .advice i{display: inline-block;width: 25px;height: 20px;background-image: url(../../icon/news.png);background-repeat: no-repeat;background-position: left center;background-size: cover;vertical-align: middle;margin-right: 5px;}
+
+#new .about{padding: 10px;width: 100%;box-sizing: border-box;border-bottom: 5px solid #efefef;}
+#new .about .title{padding-left: 10px;border-left: 5px solid #ff6734;}
+#new .about ul{margin-top: 10px;}
+#new .about li{width: 100%;height:100px; border-bottom: 1px solid #efefef;padding: 10px;box-sizing: border-box;}
+#new .about li .tit{height: 50px;}
+#new .about li:last-child{border-bottom: 0;}
+#new .about li .left{width: 100%;height:100%;}
+#new .about li .left span{color:#666;margin-right: 15px;}
+#new .about li .left span .good{display: inline-block;width: 20px;height: 15px;background: url(../../icon/news.png) no-repeat center right;vertical-align: middle;}
+#new .about li .left span .look{display: inline-block;width: 20px;height: 15px;background: url(../../icon/news.png) no-repeat center left;vertical-align: middle;}
+
+#new .reply{padding: 10px;width: 100%;box-sizing: border-box;}
+#new .reply .title{padding-left: 10px;border-left: 5px solid #ff6734;}
+#new .reply .content{margin-top: 10px;width: 100%;border-bottom: 0;}
+#new .reply .content li{height: 100px;margin-bottom: 10px;border-bottom: 1px solid #efefef;}
+#new .reply .content li:last-child{border-bottom: 0;margin-bottom: 0;}
+#new .reply .content li .logo{height: 100%;position: relative;width: 20%;}
+#new .reply .content li .logo i{display: inline-block;width: 50px;height: 50px;position: absolute;top: 20px;left: 10px;background: url(../../icon/logo.jpg)no-repeat center center;background-size: cover;}
+
+#new .reply .content li .info{height: 100%;width: 77%;}
+#new .reply .content li .info p{margin-bottom: 10px;}
+#new .reply .content li .info .name{color: #4A6D9E;}
+#new .reply .content li .info .time{color:#999;}
+#new .reply .content li .info .time span{margin-right: 10px;}
+
+.talk{width: 100%;height: 100%;background-color: rgba(0,0,0,.5);position: fixed;top: 0;z-index: 100;display: none;}
+.talk .write{width: 100%;height: 200px;border: 1px solid #efefef;background-color: #fff;position: absolute;bottom: 0;box-sizing: border-box;z-index: 105;}
+.talk .write div{height: 30px;line-height: 30px;color: #ff6735;padding: 0 10px;border-bottom: 1px solid #efefef;}
+.talk .write textarea{width: 100%;height: 150px;resize: none;color:#666;font-size: 16px;padding: 10px;outline: 0;box-sizing: border-box;}

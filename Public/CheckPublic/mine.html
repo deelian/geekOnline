@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/loginPage.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+        #footer{  background-color: #f2f2f2; position: fixed;z-index: 20;bottom: 0;width: 100%; }
+        #footer ul li{  padding-top: 36px; padding-bottom: 4px; background: url() no-repeat center 2px; background-size: auto 30px; text-align: center; }
+        #footer ul li.active{ color: #6ab494; }
+        #footer ul li:nth-child(1){ background-image: url(./image/bottombtn0101.png); }
+        #footer ul li:nth-child(2){ background-image: url(./image/bottombtn0201.png); }
+        #footer ul li:nth-child(3){ background-image: url(./image/bottombtn0301.png); }
+        #footer ul li:nth-child(1).active{ background-image: url(./image/bottombtn0102.png); }
+        #footer ul li:nth-child(2).active{ background-image: url(./image/bottombtn0202.png); }
+        #footer ul li:nth-child(3).active{ background-image: url(./image/bottombtn0302.png); }
+        .flex-con{
+          overflow: auto;padding-bottom: 61px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap" class="flex-wrap flex-vertical">
+    <div id="main" class="flex-con">
+      <div id="login">
+      <div class="pic">
+        <div class="logo">
+          <span>立即登录</span>
+        </div>
+      </div>
+      <ul class="a0">
+        <li class="num">
+          <i class="num"></i>
+          <span>我的积分</span>
+          <span class="fr icon"></span>
+          <span class="fr fs18 num">2</span>
+        </li>
+        <li class="card">
+          <i class="card"></i>
+          <span>我的优惠券</span>
+          <span class="fr icon"></span>
+        </li>
+      </ul>
+      <ul class="a1">
+        <li class="activity">
+          <i class="activity"></i>
+          <span>我的活动</span>
+          <span class="fr icon"></span>
+          <span class="fr fs18 num">2</span>
+        </li>
+        <li class="study">
+          <i class="study"></i>
+          <span>我的学习</span>
+          <span class="fr icon"></span>
+        </li>
+        <li class="question">
+          <i class="question"></i>
+          <span>我的提问</span>
+          <span class="fr icon"></span>
+          <span class="fr fs18 num">1</span>
+        </li>
+        <li class="store">
+          <i class="store"></i>
+          <span>我的收藏</span>
+          <span class="fr icon"></span>
+        </li>
+        <li class="pay">
+          <i class="pay"></i>
+          <span>我的订单</span>
+          <span class="fr icon"></span>
+        </li>
+      </ul>
+      <ul class="a2">
+        <li>
+          <i class="set"></i>
+          <span>我的设置</span>
+          <span class="fr icon"></span>
+        </li>
+        <li>
+          <i class="advice"></i>
+          <span>意见反馈</span>
+          <span class="fr icon"></span>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" class="border-t">
+        <ul class="flex-wrap" >
+            <li class="flex-con" >首页</li>
+            <li class="flex-con" >产品</li>
+            <li class="flex-con active" >我的</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+    <script src="./script/api.js"></script>
+    <script src="./script/jquery.min.js"></script>
+    <script type="text/javascript">
+    // 随意切换按钮
+    $(function(){
+        $('#footer li').click(function() {
+            $('#footer li').eq($(this).index()).addClass("active").siblings().removeClass("active");
+        });
+        $('#footer li:nth-child(2)').click(function(){
+            window.location.href = 'product.html';
+        });
+        $('#footer li:nth-child(1)').click(function(){
+            window.location.href = 'index.html';
+        });
+        $('.a1 li.activity').click(function(){
+            window.location.href = 'html/setting/luck.html';
+        });
+        $('.a1 li.study').click(function(){
+            window.location.href = 'html/setting/study.html';
+        });
+        $('.a1 li.question').click(function(){
+            window.location.href = 'html/setting/question.html';
+        });
+        $('.a1 li.store').click(function(){
+            window.location.href = 'html/setting/store.html';
+        });
+        $('.a1 li.pay').click(function(){
+            window.location.href = 'html/setting/order.html';
+        });
+        $('.a2 li:nth-child(1)').click(function(){
+            window.location.href = 'html/setting/info.html';
+        });
+        $('.a2 li:nth-child(2)').click(function(){
+            window.location.href = 'html/setting/advice.html';
+        });
+        $('.pic .logo').click(function(){
+          window.location.href = 'html/mine/login.html';
+        });
+        $('.a0 .num').click(function(){
+          window.location.href = 'html/setting/daily.html';
+        });
+        $('.a0 .card').click(function(){
+          window.location.href = 'html/setting/coupon.html';
+        });
+    })
+</script>

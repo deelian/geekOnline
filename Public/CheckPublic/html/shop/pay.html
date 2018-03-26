@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/shop/pay.css" />
+
+</head>
+
+<body>
+    <div id="pay">
+        <header>
+            <span class="back"><i></i></span>
+            <div class="tab">
+                <span class="fs16">支付订单</span>
+            </div>
+        </header>
+        <div class="content">
+            <div class="tit">需要支付：￥<span>66</span></div>
+            <ul>
+                <li>
+                    <label for="wechat">
+              <span class="left"><img src="../../icon/weixin.jpg" alt=""></span>
+              <span class="right">微信支付</span>
+              <input type="radio" name="pay" id="wechat">
+              </label>
+                </li>
+                <li>
+                    <label for="alipay">
+              <span class="left"><img src="../../icon/alipay.png" alt=""></span>
+              <span class="right">支付宝支付</span>
+              <input type="radio" name="pay" id="alipay">
+              </label>
+                </li>
+            </ul>
+        </div>
+        <footer>
+          <button>确认支付</button>
+        </footer>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    </script>
+</body>
+
+</html>

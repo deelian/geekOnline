@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/shop/car.css" />
+</head>
+
+<body>
+    <div id="car">
+        <header>
+            <span class="back"><i></i></span>
+            <div class="tab">
+                <span class="fs16">购物车列表</span>
+            </div>
+        </header>
+        <div class="content">
+            <ul>
+                <li class="clear">
+                    <div class="desc">
+                        <div class="left fl"><img src="../../image/wangke1.jpg" alt="">
+                        </div>
+                        <div class="right fr">
+                            <p class="tit">智能记账</p>
+                            <p class="info">
+                                <span class="cost">￥<span>66</span></span>
+                                <span class="all fr">合计￥<em>66</em></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="del fr clear">
+                        <div class="num clear fl">
+                            <span class="add">+</span>
+                            <input class="n" value="1" onfocus="this.blur();" />
+                            <span class="sub">-</span>
+                        </div>
+                        <button>删除</button>
+                    </div>
+                </li>
+                <li class="clear">
+                    <div class="desc">
+                        <div class="left fl"><img src="../../image/wangke1.jpg" alt="">
+                        </div>
+                        <div class="right fr">
+                            <p class="tit">智能记账</p>
+                            <p class="info">
+                                <span class="cost">￥<span>66</span></span>
+                                <span class="all fr">合计￥<em>66</em></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="del fr clear">
+                        <div class="num clear fl">
+                            <span class="add">+</span>
+                            <input class="n" value="1" onfocus="this.blur();" />
+                            <span class="sub">-</span>
+                        </div>
+                        <button>删除</button>
+                    </div>
+                </li>
+                <li class="clear">
+                    <div class="desc">
+                        <div class="left fl"><img src="../../image/wangke1.jpg" alt="">
+                        </div>
+                        <div class="right fr">
+                            <p class="tit">智能记账</p>
+                            <p class="info">
+                                <span class="cost">￥<span>100</span></span>
+                                <span class="all fr">合计￥<em>100</em></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="del fr clear">
+                        <div class="num clear fl">
+                            <span class="add">+</span>
+                            <input class="n" value="1" onfocus="this.blur();" />
+                            <span class="sub">-</span>
+                        </div>
+                        <button>删除</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="coupon">
+                <span>使用积分(660可用)</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" value="0">
+            </div>
+            <div class="cost">
+                <span class="gross">共<em></em>件商品</span>
+                <span class="total">合计：<em></em>元</span>
+                <button>确认购买</button>
+            </div>
+        </footer>
+        <div class="delete">
+          <div>确定要删除该物品吗？</div>
+            <button class="cancel">取消</button>
+            <button class="sure">删除</button>
+        </div>
+    </div>
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.del .add').click(function() {
+                var $j = $(this).parent().parent().parent();
+                var $i = $(this).next().val();
+                ++$i;
+                $(this).next().val($i);
+                $('span.all em', $j).html($(this).next().val() * $('.cost span', $j).text());
+                totalCost();
+            });
+
+            $('.del .sub').click(function() {
+                var $j = $(this).parent().parent().parent();
+                var $i = $(this).prev().val();
+                --$i < 0 ? $i = 0 : $i = $i;
+                $(this).prev().val($i);
+                $('span.all em', $j).html($(this).prev().val() * $('.cost span', $j).text());
+                totalCost();
+            });
+
+            $('.del button').click(function() {
+                $(this).parent().parent().remove();
+                totalCost();
+                totalNum();
+            })
+            // 计算总价
+            function totalCost(){
+              var allCost = 0;
+              $.each($('span.all em'), function() {
+                  allCost += parseInt($(this).text());
+              });
+              console.log($('.coupon input').val())
+              if($('.coupon input').val()){
+                allCost -= parseInt($('.coupon input').val());
+                allCost < 0?  $('.total em').text(0): $('.total em').text(allCost);
+              }else{
+                allCost < 0?  $('.total em').text(0): $('.total em').text(allCost);
+              }
+            }
+            totalCost();
+            // 商品个数
+            function totalNum(){
+              var num = $('ul li').length;
+              $('.gross em').text(num);
+            }
+            totalNum();
+            //使用积分
+            $('.coupon input').on('change',function(){
+                totalCost();
+            });
+
+            $('header .back').click(function(){
+        window.history.go(-1);
+      });
+            $('footer button').click(function(){
+                window.location.href = 'pay.html';
+            })
+        });
+    </script>
+</body>
+</html>

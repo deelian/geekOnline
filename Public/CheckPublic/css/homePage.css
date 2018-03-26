@@ -1,0 +1,107 @@
+header{padding: 10px;background-color: #333;position: fixed;top: 0;width: 100%;left: 0;z-index: 10;box-sizing: border-box;}
+header .logo{width: 70px;height: 27px;background: url(../icon/newlogo.png)no-repeat;position: absolute;top: 12px;left: 2%;background-size: cover;}
+header .tab{margin:0 auto; width: 50%;text-align: center;}
+header .tab span{margin-right: 4%;border-bottom: 2px solid #fff;line-height: 25px;color:#fff}
+header .tab span:last-child{margin-right: 0;}
+header .login{position: absolute;right: 5%;top: 15px;color:#fff;}
+/*首页顶部*/
+#frame0{position: relative;overflow: hidden;}
+#frame0 #big{position: absolute;top: 47px;left: 0px;}
+#frame0 #course {position: absolute;top:0px;}
+#frame0 #course .head{border-bottom: 5px solid #EEF1F6;}
+#frame0 #course .head .banner{display: flex;display: -webkit-flex;justify-content: center;align-items: center;height: 120px;position: relative;background: url(../image/top.jpg)no-repeat center center;background-size: cover;}
+#frame0 #course .head .banner .login{position: relative;;width: 100px;height: 30px;line-height: 30px;border: 1px solid #fff;border-radius: 3px;text-align: center;color:#fff;}
+#frame0 #course .head .banner .login .tit{position: absolute;bottom: -30px;left: -10px;width: 120px;color: #fff;}
+#frame0 #course .head .nav{height: 70px;background: url(../image/banner.jpg) no-repeat center center;}
+/*本地培训*/
+#frame0 #course .section{padding: 10px;overflow: hidden;border-bottom: 10px solid #EEF1F6;}
+#frame0 #course .section:last-child{border-bottom: 0;}
+#frame0 #course .section .title{font-size: 16px;}
+#frame0 #course .section .title .fr{height: 25px;width: 25px;background: url(../icon/forward.png)no-repeat center;background-size: cover;}
+#frame0 #course .section .plate{height: 90px;padding-bottom: 10px;margin-top: 10px;}
+#frame0 #course .section .plate .left{height: 100%;width: 30%;margin-right: 2%}
+#frame0 #course .section .plate .left img{width: 100%;height: 100%;}
+#frame0 #course .section .plate .right{height: 100%;width: 67%;}
+#frame0 #course .section .plate .right .top{margin-bottom: 10px;font-size: 16px;}
+#frame0 #course .section .plate .right .mid{margin-bottom: 10px;font-size: 14px;}
+#frame0 #course .section .plate .right .down{color:#FF6734;}
+#frame0 #course .section .plate .right .down span{border: 1px solid #ff6734;font-size: 12px;}
+/*近期直播*/
+#frame0 #course .section .long{width: 220%;}
+#frame0 #course .section .long .mod{float: left;width: 23%;margin-right: 1%;padding: 10px 0;}
+#frame0 #course .section .long .mod:last-child{margin-right: 0;}
+#frame0 #course .section .long .mod .big{width: 100%;height: 120px;margin-bottom: 10px;}
+#frame0 #course .section .long .mod .big img{width: 100%;height: 100%;}
+#frame0 #course .section .long .mod .tit{margin-bottom: 10px;font-size: 16px;}
+/*视频*/
+#frame0 #course .section .content .course{padding: 10px 0;margin-right: 2%;width:49%;float: left;}
+#frame0 #course .section .content .course:nth-child(even){margin-right: 0;}
+#frame0 #course .section .content .course .big{width: 100%;height: 120px;margin-bottom: 10px;}
+#frame0 #course .section .content .course .big img{width: 100%;height: 100%;}
+#frame0 #course .section .content .course .info{margin-bottom: 15px;font-size: 16px;}
+#frame0 #course .section .content .course .cost{color:#FF6734;}
+#frame0 #course .section .content .course .cost span{color: #666;font-size: 12px;}
+
+/*资讯*/
+#frame0 #news {position: relative;}
+#frame0 #news .show{width: 100%;overflow: hidden;position: relative;}
+#frame0 #news .move{position: absolute;left: 0;top:0;}
+#frame0 #news .nav{width: 100%;height: 50px;line-height: 50px;border-bottom: 1px solid #EFEFEF;background-color: #fff;z-index: 10;}
+#frame0 #news .nav li{width: 16.666666666%;text-align: center;float: left;}
+#frame0 #news .content{padding: 10px;box-sizing: border-box;position: absolute;top: 0;}
+#frame0 #news .content li{width: 100%;height:100px; border-bottom: 1px solid #efefef;padding: 10px;box-sizing: border-box;}
+#frame0 #news .content li:last-child{border-bottom: 0;}
+#frame0 #news .content li .left{width: 70%;height:100%;}
+#frame0 #news .content li .left span{color:#666;}
+#frame0 #news .content li .left span.fr{margin-right: 15px;}
+#frame0 #news .content li .left span .good{display: inline-block;width: 20px;height: 15px;background: url(../icon/news.png) no-repeat center right;vertical-align: middle;}
+#frame0 #news .content li .left span .look{display: inline-block;width: 20px;height: 15px;background: url(../icon/news.png) no-repeat center left;vertical-align: middle;}
+#frame0 #news .content li .left .title{height: 60px;}
+#frame0 #news .content li .right{width: 29%;height: 100%;}
+#frame0 #news .toMore{position: fixed;bottom: 61px;height: 30px;line-height: 30px;background-color: rgba(0,0,0,.7);color: #fff;z-index: 20;text-align: center;font-size: 16px;display: none;width: 100%;}
+
+
+/*问答*/
+/*专家*/
+#frame0 #answer{position: absolute;top: 0px;}
+#frame0 #answer .show{width: 100%;position: relative;overflow: hidden;}
+#frame0 #answer .nav{width: 100%;height: 70px;line-height: 70px;border-bottom: 1px solid #EFEFEF;background-color: #fff;z-index: 10;}
+#frame0 #answer .nav .box{margin:0 auto;width: 200px;}
+#frame0 #answer .nav .box span{width: 80px;height: 20px;line-height: 20px;border: 1px solid #333;border-radius: 20px;padding: 5px;margin-right: 5px;text-align: center;}
+#frame0 #answer .move{position: absolute;top: 0;left: 0;}
+#frame0 #answer .content{padding: 10px 10px 10px;position: absolute;top: 0;left: 0;box-sizing: border-box;}
+#frame0 #answer .content .mod {padding-top: 10px;}
+#frame0 #answer .content .mod .man{width: 100%;padding-bottom: 10px;height: 60px;border-bottom: 1px solid #efefef;}
+#frame0 #answer .content .mod .man .icon{height: 100%;width: 20%;margin-right: 3%;}
+#frame0 #answer .content .mod .man .desc{width: 50%;padding-top: 10px;}
+#frame0 #answer .content .mod .man .desc p{width: 100%;}
+#frame0 #answer .content .mod .man .que{width: 25%;height: 100%;text-align: center;}
+#frame0 #answer .content .mod .man .que span{color:#FE6927;}
+#frame0 #answer .content .mod .man .que p{height: 30px;line-height: 30px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#frame0 #answer .content .mod .man .que button{width: 100%;height: 30px;box-sizing: border-box;border: 1px solid #fe6927;border-radius: 15px;outline: 0;color:#fe6927;}
+#frame0 #answer .content .mod .detail{width: 100%;padding:10px 0;border-bottom: 5px solid #efefef;}
+#frame0 #answer .content .mod .detail button{height: 40px;line-height: 40px;border: 1px solid #5375B3;border-radius: 20px;padding: 0 10px;color:#5375B3;}
+#frame0 #answer .content .mod .detail p{padding: 10px 0 0;height: 75px;width: 100%;line-height: 25px;}
+
+
+/*问题榜*/
+#frame0 #answer .content2{padding: 10px 10px 10px;position: absolute;top: 0;box-sizing: border-box;}
+#frame0 #answer .content2 .mod{margin-bottom: 10px;border-bottom: 1px solid #efefef;}
+#frame0 #answer .content2 .mod:last-child{margin-bottom: 0;border-bottom: 0;}
+#frame0 #answer .content2 .mod p{width: 100%;padding: 10px 0 20px;font-size: 16px;}
+#frame0 #answer .content2 .mod span{color:#666;padding: 10px 0;}
+
+/*面授*/
+#frame0 #teach{position: absolute;top: 0px;}
+#frame0 #teach .content{width: 100%;}
+#frame0 #teach .content .mod{width: 50%;box-sizing: border-box;padding: 10px;height:350px; }
+#frame0 #teach .content .mod .pic{width: 100%;height: 200px;}
+#frame0 #teach .content .mod .pic img{width: 100%;height: 100%;border-radius: 3px;}
+#frame0 #teach .content .mod .title{height: 40px;line-height: 40px;font-size: 16px;}
+#frame0 #teach .content .mod .desc{height: 20px;line-height: 20px;}
+#frame0 #teach .content .mod .desc i{display: inline-block;width: 20px;height: 15px;background: url(../icon/news.png) no-repeat center left;vertical-align: middle;}
+#frame0 #teach .content .mod .desc .fr{color:#fe6927;}
+#frame0 #teach .content .mod .info{height: 25px;line-height: 25px;}
+#frame0 #teach .content .mod .info span{color:#666;}
+#frame0 #teach .content .mod .info button{width: 40%;height: 25px;line-height: 25px;text-align: center;border: 1px solid #fe6927;color:#fe6927;border-radius: 3px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#frame0 #teach .content .mod .info button.no{border: 1px solid #999;color:#999;}

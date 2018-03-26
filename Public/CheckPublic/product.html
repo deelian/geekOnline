@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>产品</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/productPage.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+        #footer{  background-color: #f2f2f2; position: fixed;z-index: 20;bottom: 0;width: 100%; }
+        #footer ul li{  padding-top: 36px; padding-bottom: 4px; background: url() no-repeat center 2px; background-size: auto 30px; text-align: center; }
+        #footer ul li.active{ color: #6ab494; }
+        #footer ul li:nth-child(1){ background-image: url(./image/bottombtn0101.png); }
+        #footer ul li:nth-child(2){ background-image: url(./image/bottombtn0201.png); }
+        #footer ul li:nth-child(3){ background-image: url(./image/bottombtn0301.png); }
+        #footer ul li:nth-child(1).active{ background-image: url(./image/bottombtn0102.png); }
+        #footer ul li:nth-child(2).active{ background-image: url(./image/bottombtn0202.png); }
+        #footer ul li:nth-child(3).active{ background-image: url(./image/bottombtn0302.png); }
+        .flex-con{
+          overflow: auto;padding-bottom: 61px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap" class="flex-wrap flex-vertical">
+    <div id="main" class="flex-con">
+        <div id="product">
+            <header>
+            <div class="tab">
+                <span class="fs16">商品分类</span>
+            </div>
+            </header>
+            <div class="content">
+                <div class="mod">
+                    <div class="title fs16">热门产品</div>
+                    <div class="list">
+                        <div class="info"><img src="icon/4.png"><span class="clr9 fs16">培训授课</span></div>
+                        <div class="info"><img src="icon/1.png"><span class="clr9 fs16">财政咨询</span></div>
+                        <div class="info"><img src="icon/2.png"><span class="clr9 fs16">培训授课</span></div>
+                        <div class="info"><img src="icon/3.png"><span class="clr9 fs16">培训授课</span></div>
+                    </div>
+                </div>
+                <div class="mod">
+                    <div class="title fs16">财政税收</div>
+                    <div class="list">
+                        <div class="info"><img src="icon/3.png"><span class="clr9 fs16">培训授课</span></div>
+                        <div class="info"><img src="icon/1.png"><span class="clr9 fs16">财政咨询</span></div>
+                        <div class="info"><img src="icon/2.png"><span class="clr9 fs16">培训授课</span></div>
+                    </div>
+                </div>
+                <div class="mod">
+                    <div class="title fs16">折扣专区</div>
+                    <div class="list">
+                        <div class="info"><img src="icon/4.png"><span class="clr9 fs16">积分专属</span></div>
+                        <div class="info"><img src="icon/1.png"><span class="clr9 fs16">5折优惠</span></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="border-t">
+        <ul class="flex-wrap" >
+            <li class="flex-con" >首页</li>
+            <li class="flex-con  active" >产品</li>
+            <li class="flex-con" >我的</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+    <script src="./script/api.js"></script>
+    <script src="./script/jquery.min.js"></script>
+    <script>
+    // 随意切换按钮
+    $(function(){
+        $('#footer li').click(function() {
+            $('#footer li').eq($(this).index()).addClass("active").siblings().removeClass("active");
+        });
+        $('#footer li:nth-child(1)').click(function(){
+            window.location.href = 'index.html';
+        });
+        $('#footer li:nth-child(3)').click(function(){
+            window.location.href = 'mine.html';
+        });
+          $('#product .mod .info').each(function(){
+            $(this).on('click',function(){
+              window.location.href = 'html/shop/list.html';
+            });
+          })
+    })
+</script>

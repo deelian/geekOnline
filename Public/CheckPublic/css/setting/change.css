@@ -1,0 +1,9 @@
+body{background-color: #F6F6F6;}
+#change header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background:#fff;z-index: 10;border-bottom: 1px solid #efefef;color:#fff;}
+#change header .back{position: absolute;left: 0;height: 100%;width: 50px;}
+#change header .sure{position: absolute;right: 15px;color:#333;}
+#change header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#change header div{width: 50%;margin: 0 auto;font-size: 16px;text-align: center;color:#333;}
+
+#change .content{padding: 10px;padding-top:60px;}
+#change .content input{height: 50px;border:1px solid #efefef;background-color: #fff;width: 100%;font-size: 22px;padding: 10px;box-sizing: border-box;}

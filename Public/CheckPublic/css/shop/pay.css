@@ -1,0 +1,15 @@
+#pay header{position: fixed;width: 100%;height:50px;padding: 0 10px;top: 0;line-height: 50px;background-color: #fff;z-index: 10;border-bottom: 1px solid #efefef;box-sizing: border-box;}
+#pay header .back{position: absolute;left: 0;height: 100%;width: 50px;}
+#pay header .back i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#pay header .tab{width: 50%;text-align: center;margin: 0 auto;}
+#pay .content{padding-top: 50px ;}
+#pay .content .tit{padding:20px;font-size: 20px;}
+#pay .content ul li{width: 100%;padding: 10px 20px;box-sizing: border-box;border: 1px solid #efefef;border-bottom: 0;overflow: hidden;}
+#pay .content ul li label{width: 100%;}
+#pay .content ul li:last-child{border-bottom: 1px solid #efefef;}
+#pay .content ul li .left{width: 30px;height: 30px;vertical-align: middle;}
+#pay .content ul li .right{vertical-align: middle;margin-left: 10px;font-size: 18px;}
+#pay .content ul li input{float: right;margin-top: 10px;width: 20px;height: 20px;}
+
+#pay footer{position: fixed;width: 100%;height:40px;bottom: 0;line-height: 40px;background-color: #fff;z-index: 10;}
+#pay footer button{text-align: center;background-color: #ff6734;border-radius: 10px;color: #fff;width: 100%;height: 100%;box-sizing: border-box;}

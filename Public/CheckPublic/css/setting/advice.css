@@ -1,0 +1,25 @@
+#advice header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background:#fff;z-index: 10;border-bottom: 1px solid #efefef;color:#fff;}
+#advice header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#advice header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#advice header div{width: 50%;margin: 0 auto;font-size: 16px;text-align: center;color:#333;}
+
+#advice .content{padding: 10px;padding-top: 60px;width: 100%;box-sizing: border-box;}
+#advice .content li{padding: 10px;}
+#advice .content .user div{float: right;margin-left: 5px;}
+#advice .content .manager div{float: left;margin-right: 5px;}
+#advice .content .logo{display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;height: 100px;width: 15%;}
+#advice .content .logo div{width: 50px;height: 50px;}
+#advice .content .logo div img{border-radius: 100%;}
+#advice .content .user .txt{text-align: right;margin-top: 15px;width: 80%;}
+#advice .content .manager .txt{text-align: left;margin-top: 15px;width: 80%;}
+#advice .content .txt p{color:#666;font-size: 16px;margin-bottom: 5px;}
+#advice .content .txt div{background-color: #f1f1f1;padding: 10px;font-size: 16px;position: relative;}
+
+
+#advice footer{display: flex;justify-content: space-around;width: 100%;position: fixed;bottom: 0;background:#fff;z-index: 10;color:#666;overflow: hidden;border-top: 1px solid #efefef;}
+#advice footer span{text-align: center;display: inline-flex;display: -webkit-inline-flex;justify-content: space-around;align-items: center;}
+#advice footer span i{width: 35px;height: 35px;display: inline-block;}
+#advice footer span .talk{background: url(../../icon/yuyin.png)no-repeat;background-size: cover;}
+#advice footer span .camera{background: url(../../icon/xiangji.png)no-repeat;background-size: cover;}
+#advice footer span input{width: 200px;height: 40px;;border: 1px solid #d3d3d3;background-color: #F6F6F6;display: inline-block;vertical-align: middle;font-size: 20px;border-radius: 10px;}
+#advice footer span.send{padding: 5px;font-size: 18px;}

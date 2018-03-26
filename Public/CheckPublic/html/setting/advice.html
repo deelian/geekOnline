@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/advice.css" />
+</head>
+
+<body>
+    <div id="advice">
+        <header>
+            <span class="back"><i></i></span>
+            <div>意见反馈</div>
+        </header>
+        <div class="content">
+          <ul>
+            <li class="user clear">
+              <div class="logo"><div><img src="../../image/wangke1.jpg" alt=""></div></div>
+              <div class="txt">
+                <p>2017-06-10 14:40</p>
+                <div>为什么这多课看不了啊</div>
+              </div>
+            </li>
+            <li class="manager clear">
+              <div class="logo"><div><img src="../../image/wangke3.jpg" alt=""></div></div>
+              <div class="txt">
+                <p>2017-06-10 15:40</p>
+                <div>我们正在努力上传，请您稍等</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <footer>
+          <span><i class="talk"></i><i class="camera"></i></span>
+          <span><input type="text" name="text" placeholder="说点什么吧...."></span>
+          <span class="send">发送</span>
+        </footer>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    </script>
+</body>
+
+</html>

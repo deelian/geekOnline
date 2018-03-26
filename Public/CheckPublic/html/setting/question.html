@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/question.css" />
+</head>
+
+<body>
+  <div id="question">
+    <header>
+      <span class="back"><i></i></span>
+      <div>我的提问</div>
+    </header>
+    <div class="content">
+      <div class="tab">
+        <span class="active2">已回答</span>
+        <span>待回答</span>
+      </div>
+      <div class="show">
+        <div class="move">
+          <div class="mod a0">
+            <div class="video clear">
+              <div class="right fr fs16">
+                <p class="fs16">不得抵扣的固定资产发生用途改变用于允许抵扣进项税额的应税项目，如何抵扣进项税额？</p>
+                <p class="clr9">2017-06-01 09:20</p>
+              </div>
+            </div>
+            <div class="video clear">
+              <div class="right fr fs16">
+                <p class="fs16">企业既有简易计税项目，又有一般计税项目，营改增后购进办公用不动产，能否抵扣进项税？</p>
+                <p class="clr9">2017-06-01 09:20</p>
+              </div>
+            </div>
+          </div>
+          <div class="mod a1">
+            <div class="video clear">
+              <div class="right fr fs16">
+                <p class="fs16">不得抵扣的固定资产发生用途改变用于允许抵扣进项税额的应税项目，如何抵扣进项税额？</p>
+                <p class="clr9">2017-06-01 09:20</p>
+              </div>
+            </div>
+            <div class="video clear">
+              <div class="right fr fs16">
+                <p class="fs16">企业既有简易计税项目，又有一般计税项目，营改增后购进办公用不动产，能否抵扣进项税？</p>
+                <p class="clr9">2017-06-01 09:20</p>
+              </div>
+            </div>
+            <div class="video clear">
+              <div class="right fr fs16">
+                <p class="fs16">不得抵扣的固定资产发生用途改变用于允许抵扣进项税额的应税项目，如何抵扣进项税额？</p>
+                <p class="clr9">2017-06-01 09:20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('header .back').click(function(){
+        window.history.go(-1);
+      });
+        $('#question .content .show').css('height', $('.a0').outerHeight());
+        $('#question .content .mod').each(function(i) {
+            $(this).css('left',$(document.body).width()*i);
+        });
+        $('#question .tab span').each(function(i){
+          var j = 'a' + i;
+          $(this).on('click', function() {
+              $('.move').animate({
+                  left: -$(document.body).width() * i
+              });
+              $("#question .tab span").eq($(this).index()).addClass("active2").siblings().removeClass("active2");
+              $('#question .content .show').css('height', $('.' + j).outerHeight());
+          });
+        });
+        $('#question .a0 .video').each(function(){
+          $(this).on('click',function(){
+            window.location.href = '../home/problem.html';
+          })
+        });
+      })
+    </script>
+</body>
+
+</html>

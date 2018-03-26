@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/coupon.css" />
+</head>
+
+<body>
+    <div id="coupon">
+        <header>
+            <span class="back"><i></i></span>
+            <div>我的优惠券</div>
+        </header>
+        <div class="content">
+            <div class="tab">
+                <span class="active">未使用(2)</span>
+                <span>已过期(3)</span>
+                <span>已使用(2)</span>
+            </div>
+            <div class="show">
+                <div class="move">
+                    <div class="mod a0">
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">10</span></p>
+                                <p class="clr6">满20可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-11 0:00:00</p>
+                            </div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">20</span></p>
+                                <p class="clr6">满40可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-11 0:00:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mod a1">
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">2</span></p>
+                                <p class="clr6">满5可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-21 0:00:00</p>
+                            </div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">40</span></p>
+                                <p class="clr6">满200可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-11 0:00:00</p>
+                            </div>
+                        </div>
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">20</span></p>
+                                <p class="clr6">满40可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-11 0:00:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mod a2">
+                        <div class="video clear">
+                            <div class="left fl">
+                                <p class="orange">￥<span class="fs30">50</span></p>
+                                <p class="clr6">满1000可用</p>
+                            </div>
+                            <div class="right fr">
+                                <p class="fs20">优惠券</p>
+                                <p class="clr6">单笔订单满20元可用</p>
+                                <p class="clr9">有效期至：2017-06-11 0:00:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#coupon .content .show').css('height', $('.a0').outerHeight());
+
+            $('#coupon .content .mod').each(function(i) {
+                $(this).css('left', $(document.body).width() * i);
+            });
+            $('#coupon .tab span').each(function(i) {
+                $(this).on('click', function() {
+                    var j = 'a' + i;
+                    $('#coupon .content .show').css('height', $('.' + j).outerHeight());
+                    $('.move').animate({
+                        left: -$(document.body).width() * i
+                    });
+                    $("#coupon .tab span").eq($(this).index()).addClass("active").siblings().removeClass("active");
+                });
+            });
+            $('header .back').click(function(){
+        window.history.go(-1);
+      });
+           
+        })
+    </script>
+</body>
+
+</html>

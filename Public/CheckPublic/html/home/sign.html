@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/sign.css" />
+</head>
+
+<body>
+    <div id="sign">
+        <header>
+            <span class="back"><i></i></span>
+            <div>培训报名</div>
+        </header>
+        <div class="title">
+            <div class="top">
+                <div class="left fl"></div>
+                <div class="right fr">
+                    <p>【会员试听】2016税务稽查重点于风险防范（重庆）</p>
+                    <div>
+                        <span class="orange fr">￥660</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plan"><i></i>重庆市江北区未来国际大厦<br/><br/><i></i>2017-09-10 09:00~17:00</div>
+        <div class="man">
+          <div class="fs16">参训人</div>
+          <div class="content">
+          <ul>
+            <li>
+              <div class="left">
+                <input type="text" placeholder="请输入参训人名称">
+                <input type="text" placeholder="请输入参训人手机号">
+                <button class="del">删除</button>
+              </div>
+            </li>
+          </ul>
+          </div>
+          <button class="new">添加新的参训人</button>
+        </div>
+        <footer>
+          <div class="white">去支付</div>
+        </footer>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $('.about .content ul li').click(function(){
+        $(this).siblings().toggle();
+      });
+      $('.man .left .del').click(function(){
+        $(this).parent().parent().parent().remove();
+      });
+      $('.man .new').click(function(){
+        $('.man .content').append("<ul><li><div class='left'><input type='text' placeholder='请输入参训人名称'/><input type='text' placeholder='请输入参训人手机号'/><button class='del'>删除</button></div></li></ul>");
+        $('.man .left .del').click(function(){
+          $(this).parent().parent().parent().remove();
+        });
+      });
+    })
+    $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('footer .white').click(function(){
+        window.location.href = '../shop/pay.html';
+      });
+    </script>
+</body>
+
+</html>

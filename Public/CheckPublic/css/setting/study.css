@@ -1,0 +1,15 @@
+html{overflow-x: hidden;}
+#study header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background:#fff;z-index: 10;border-bottom: 1px solid #efefef;}
+#study header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#study header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#study header div{width: 50%;margin: 0 auto;font-size: 16px;text-align: center;}
+
+#study .content{padding: 10px;padding-top: 60px;width: 100%;box-sizing: border-box;}
+#study .content .tab{width: 100%;border-bottom: 1px solid #efefef;height:30px;line-height: 30px;}
+#study .content .tab span{width: 32%;text-align: center;}
+#study .content .show{overflow: hidden;}
+#study .content .show .move{width: 300%;position: relative;}
+#study .content .show .move .mod{padding: 10px;box-sizing: border-box;width: 33.33333333%;position: absolute;top: 0;}
+#study .content .mod .video{padding: 10px 0;border-bottom: 1px solid #efefef;height: 80px;width: 100%;}
+#study .content .mod .video .left{width: 20%;height: 100%;}
+#study .content .mod .video .right{width: 78%;height: 100%;}

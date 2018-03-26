@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/daily.css" />
+</head>
+
+<body>
+    <div id="daily">
+        <header>
+            <span class="back"><i></i></span>
+            <div>签到</div>
+        </header>
+        <div class="content">
+            <div class="top">
+                <div class="top-logo">
+                    <div>我的积分</div>
+                    <div>340</div>
+                </div>
+            </div>
+            <div class="down">
+                <div class="button">
+                    <button>点击签到</button>
+                    <p class="clr9">已连续签到<span>12</span>天</p>
+                </div>
+                <div class="explain">
+                    <p class="fs16">积分说明</p>
+                    <p>1、首次注册送20积分</p>
+                    <p>2、首次登录奖励20积分</p>
+                    <p>3、每天签到获得1积分，连续签到7天奖励3积分</p>
+                    <p>4、连续签到30天送20积分</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+    $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('.button button').click(function(){
+        $(this).text('签到成功').addClass('succ');
+    });
+    $('body').css('height',$(document).height());
+    </script>
+</body>
+
+</html>

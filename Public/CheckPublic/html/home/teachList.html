@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/teachList.css" />
+</head>
+<body>
+  <div id="teachList">
+    <header>
+      <span class="back"><i></i></span>
+      <div>本地培训</div>
+    </header>
+    <div class="section">
+        <div class="content">
+            <div class="plate borB clear">
+                <div class="left fl"><img src="../../image/peixun1.jpg" alt=""></div>
+                <div class="right fl">
+                    <div class="top">2017出口贸易贸易</div>
+                    <div class="mid clr6">地点：江北区</div>
+                    <div class="down">￥880.00&nbsp;<span>参训券可抵</span></div>
+                </div>
+            </div>
+            <div class="plate clear">
+                <div class="left fl"><img src="../../image/peixun2.jpg" alt=""></div>
+                <div class="right fl">
+                    <div class="top">2017出口贸易贸易</div>
+                    <div class="mid clr6">地点：江北区</div>
+                    <div class="down">￥880.00&nbsp;<span>参训券可抵</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="../../script/jquery.min.js"></script>
+  <script>
+  $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('.plate').each(function(){
+      $(this).on('click',function(){
+        window.location.href = 'teach.html';
+      })
+    })
+  </script>
+</body>
+</html>

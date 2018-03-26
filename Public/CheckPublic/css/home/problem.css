@@ -1,0 +1,13 @@
+#problem header{height: 50px;line-height: 50px;width: 100%;position: fixed;top: 0;background-color: #fff;z-index: 10;border-bottom: 1px solid #efefef;}
+#problem header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#problem header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#problem header div{width: 40%;margin: 0 auto;text-align: center;font-size: 16px;}
+
+#problem .content{padding: 10px;width: 100%;box-sizing: border-box;padding-top: 60px;}
+#problem .content .ask{width: 100%;position: relative;border-bottom: 1px solid #efefef;padding-bottom: 10px;}
+#problem .content .ask div{margin-bottom: 10px;}
+
+#problem .content .answer{padding: 10px;width: 100%;box-sizing: border-box;}
+#problem .content .answer .logo{width: 10%;}
+#problem .content .answer .txt{padding: 5px;border-radius: 5px;background-color: #f3f3f3;width: 80%;position: relative;}
+#problem .content .answer .txt span{width: 10px;height: 10px;position: absolute;top: 10px;left: -5px;background-color: #f3f3f3;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);}

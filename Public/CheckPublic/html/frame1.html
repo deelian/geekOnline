@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>端API</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/productPage.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="../script/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="product">
+        <div class="mod clear">
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+        </div>
+        <div class="mod clear">
+            <div class="right fl">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+        </div>
+        <div class="mod clear">
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+        </div>
+        <div class="mod clear">
+            <div class="right fl">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+        </div>
+        <div class="mod clear">
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+        </div>
+        <div class="mod clear">
+            <div class="right fl">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+        </div>
+        <div class="mod clear">
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+            <div class="right fr">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+        </div>
+        <div class="mod clear">
+            <div class="right fl">
+                <p class="title">智能记账</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <p class="desc">专业代账，让工作更简单</p>
+                <button>了解更多</button>
+            </div>
+            <div class="left fl"><img src="../image/chanpin.jpg" alt=""></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script>
+        $(function(){
+          $('#product .mod').each(function(){
+            $(this).on('click',function(){
+              api.openWin({
+                  name: 'detail',
+                  url: './shop/detail.html',
+                  pageParam: {
+                      name: 'detail'
+                  }
+              });
+            });
+          })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+#que header{height: 50px;line-height: 50px;position: fixed;top: 0;border-bottom: 1px solid #efefef;width: 100%;background: #fff;z-index: 10;}
+#que header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#que header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#que header div{width: 50%;margin: 0 auto;text-align: center;font-size: 16px;}
+
+#que .mod{padding: 10px;position: relative;border-bottom: 10px solid #efefef;margin-top: 60px;}
+#que .mod .logo{width: 100%;height: 200px;position: relative;}
+#que .mod .logo .pic{width: 100px;height: 100px;margin: 0 auto;position: relative;}
+#que .mod .logo .pic span{font-size: 16px; position: absolute;bottom: -30px;left: 20px;}
+#que .mod .logo p{color: #999;width: 100%;text-align: center;margin-top: 40px;padding-bottom: 10px;}
+#que .mod .logo .cost{position: absolute;right: 0;top: 0;color:#ff6734;}
+#que .mod .desc{width: 100%;height: 150px;}
+#que .mod .desc .tag .txt{color: #999;}
+#que .mod .desc .tag div{padding: 10px;color:#5375B3;border: 1px solid #5375B3;border-radius: 25px;float: left;margin-right: 5px;}
+#que .mod .desc .info{margin-top: 15px;}
+
+#que .ask {padding: 10px;position: relative;height: 320px;}
+#que .ask p{color:#999;}
+#que .ask .question{width: 100%;height: 200px;border-radius: 10px;padding: 10px;resize: none;box-sizing: border-box;outline: 0;border: 1px solid #999;margin-top: 10px;}
+#que .ask button{width: 100%;height: 50px;background-color: #ff6734;color: #fff;border-radius: 10px;text-align: center;margin-top: 10px;}
+
+#que .had{padding: 10px;position: relative;}
+#que .had span{padding: 0 5px;border-left: 5px solid #ff6734;}
+#que .had ul li{padding: 10px 0;border-bottom: 1px solid #999;}
+#que .had ul li:last-child{border: 0;}

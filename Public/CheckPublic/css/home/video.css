@@ -1,0 +1,47 @@
+#video {position: relative;}
+#video header{width: 100%;height: 260px;}
+#video header .tit{height: 50px;line-height: 50px;width: 100%;padding: 0 10px;box-sizing: border-box;position: fixed;top: 0;z-index: 15;}
+#video header .tit .back{position: absolute;left: 0;height: 100%;width: 50px;}
+#video header .tit .back i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../../icon/back.png)no-repeat center;background-size: cover;}
+#video header .play{width: 100%;height: 260px;position: fixed;top: 0;z-index: 10;background-color: #999;}
+#video header .play div{width: 100%;height: 100%;}
+#video header .play button{position:absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);width: 200px;height: 50px;line-height: 50px;text-align: center;border-radius: 10px;background-color: #ff6735;color:#fff;z-index: 15;}
+
+#video .info{width: 100%;position: relative;}
+#video .info .tab{height: 50px;line-height: 50px;border-bottom: 1px solid #efefef;width: 100%;position: fixed;margin: 0;background-color: #fff;z-index: 10;}
+#video .info .tab span{float: left;width: 50%;box-sizing: border-box;text-align: center;}
+#video .info .show{overflow: hidden;}
+#video .info .content{padding: 10px;width: 100%;box-sizing: border-box;border-bottom: 1px solid #efefef;margin-top: 50px;}
+#video .info .content p{margin: 10px 0;}
+#video .info .teacher{padding: 20px;width: 100%;box-sizing: border-box;border-bottom: 1px solid #efefef;}
+#video .info .teacher .logo{width: 40px;height: 40px;background: url(../../icon/answer.jpg)no-repeat center center;background-size: cover;margin-right: 20px;}
+#video .info .desc{padding: 20px;width: 100%;box-sizing: border-box;}
+#video .info .desc p{margin-bottom: 20px;}
+
+#video .list{position: absolute;top: 50px;left: 0;width: 100%;display: none;}
+#video .list li{padding: 20px;}
+#video .list ul ul{display: none;}
+#video .list .all{font-size: 16px;}
+#video .list .all span{float: right;width: 25px;height: 25px;}
+#video .list .lit{color:#666;border-top: 1px solid #efefef;}
+#video .list .lit i{display: inline-block;width: 20px;height: 20px;background: url(../../icon/icon_book.png)no-repeat center center;background-size: cover;vertical-align: middle;margin-right: 5px;}
+
+#video .share{display: none;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);position: fixed;top: 0;z-index: 100;}
+#video .share .item{width: 100%;height: 150px;background-color: #fff;position: absolute;bottom: 0;text-align: center;}
+#video .share .item .icon{height: 110px;}
+#video .share .item .icon span{width: 23%;height: 100%;}
+#video .share .item .icon span i{display: inline-block;width: 100%;height: 75%;background-repeat: no-repeat;background-size: cover;background-position: center;}
+#video .share .item .cancel{height: 40px;line-height: 40px;border-top: 1px solid #efefef;}
+#video .share .item .icon span:nth-child(1) i{background-image: url(../../icon/weixin1.png)}
+#video .share .item .icon span:nth-child(2) i{background-image: url(../../icon/moment.png)}
+#video .share .item .icon span:nth-child(3) i{background-image: url(../../icon/qq.png)}
+#video .share .item .icon span:nth-child(4) i{background-image: url(../../icon/weibo.png)}
+
+#video .renew{width: 100%;height: 100%;background-color: rgba(0,0,0,.5);position: fixed;top: 0;z-index: 150;display: flex;display: -webkit-flex;justify-content: center;align-items: center;}
+#video .renew .renew-tit{position: relative;;background-color: #fff;width: 250px;height: 120px;border-radius: 5px;padding: 20px;}
+#video .renew .mid{height: 80px;text-align: left;}
+#video .renew .btn button{width: 49%;height: 30px;border-radius: 5px;color:#fff;font-size: 16px;}
+#video .renew .btn button.pay{background-color: #ff0000;}
+#video .renew .btn button.look{background-color: #ff6735;}
+
+#video .renew .close{display: inline-block;width: 40px;height: 40px;position: absolute;top: 0;right: 0;background-image: url(../../icon/close.png);background-repeat: no-repeat;background-size: 15px 15px;background-position: 10px 10px;}

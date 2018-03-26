@@ -1,0 +1,76 @@
+#login{background-color:#EEF1F6; }
+#login .pic{display: flex;display: -webkit-flex;justify-content: center;align-items: center;width: 100%;height: 200px;background:url(../image/loginLogo.png)no-repeat center center;background-size: cover;}
+#login .pic .logo{position: relative;width: 80px;height: 80px;border-radius: 100%;background:url(../icon/login.png)no-repeat center;background-size: cover;}
+#login .pic .logo span{position: absolute;left: 12px;bottom: -20px;}
+
+#login .nav{width: 100%;height: 150px;background-color: #666;}
+#login .count{padding:0 10px;margin:20px 0;background-color: #fff;display: flex;display: -webkit-flex;}
+#login .count .num,.card{flex: 1;display: flex;display: -webkit-flex;justify-content: space-between;}
+#login .count .count-pic{height: 70px;width: 50px;display: flex;display: -webkit-flex;justify-content: center;align-items: center;}
+#login .count .count-pic img{width: 30px;height: 30px;}
+#login .count .count-info{flex-basis: 100%;text-align:center;display: flex;display: -webkit-flex;flex-direction: column;justify-content: space-around;}
+#login ul{padding:0 20px;margin:20px 0;width: 100%;box-sizing: border-box;background-color: #fff;}
+#login ul:last-child{margin-bottom: 0;}
+#login ul li{font-size: 16px;padding:20px 0 20px 40px;position: relative;border-top: 1px solid #EEF1F6;height: 30px;line-height: 30px;}
+#login ul li:first-child{border-top: 0;}
+#login ul li span.icon{height: 25px;width: 25px;background: url(../icon/forward.png)no-repeat center;background-size: cover;margin-left: 5px;}
+#login ul li span.num{width: 30px;height: 30px;color:#fff;background-color: #FF0000;border-radius: 100%;text-align: center;}
+#login ul li i{display: inline-block;position: absolute;left: 0;top: 20px;;width: 30px;height: 30px;background-repeat: no-repeat;background-size: 30px 30px;}
+#login ul li i.company{background-image: url(../icon/icon_service.png);}
+#login ul li i.study{background-image: url(../icon/study.png)}
+#login ul li i.question{background-image: url(../icon/question.png)}
+#login ul li i.store{background-image: url(../icon/store.png)}
+#login ul li i.pay{background-image: url(../icon/dingdan.png)}
+#login ul li i.set{background-image: url(../icon/shezhi.png)}
+#login ul li i.advice{background-image: url(../icon/advice.png)}
+#login ul li i.activity{background-image: url(../icon/activity.png)}
+#login ul li i.num{background-image: url(../icon/qiandao.png)}
+#login ul li i.card{background-image: url(../icon/youhuiquan.png)}
+
+
+#loginDetail header{height: 50px;line-height: 50px;border-bottom: 1px solid #efefef;position: relative;}
+#loginDetail header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#loginDetail header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../icon/back.png)no-repeat center;background-size: cover;}
+#loginDetail header div{margin: 0 auto;width: 50%;text-align: center;}
+#loginDetail .content{padding: 20px;}
+#loginDetail .content .tab{height: 30px;line-height: 30px;margin-bottom: 20px;text-align: center;}
+#loginDetail .content .tab span{color:#999;border-bottom: 1px solid #999;}
+#loginDetail .content .in{margin-top: 30px;}
+#loginDetail .content .in input{outline: 0;border-bottom: 1px solid #ddd;width: 100%;margin-top:35px;height: 30px;}
+#loginDetail .content .in input:focus{border-bottom: 1px solid #FF6734;}
+#loginDetail .content button{width: 100%;margin: 30px 0 10px;border-radius: 5px;display: block;height: 40px;line-height: 40px;outline: 0;background-color:#FF6734;color: #fff;}
+#loginDetail .content button:active{opacity: .8}
+#loginDetail .content .tit{height: 20px;line-height: 20px; color:#999;}
+#loginDetail .content .in2{display: none;margin-top: 30px;}
+#loginDetail .content .in2 input{outline: 0;border-bottom: 1px solid #ddd;width: 100%;margin-top: 25px;height:40px;}
+#loginDetail .content .in2 input:focus{border-bottom: 1px solid #FF6734;}
+#loginDetail .content .in2 input[name="phone"]{width: 70%;}
+#loginDetail .content .in2 button{width: 30%;display: inline-block;background-color: #fff;color: #666;border: 1px solid #999;margin: 0;}
+
+#reg header{height: 50px;line-height: 50px;border-bottom: 1px solid #efefef;position: relative;}
+#reg header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#reg header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../icon/back.png)no-repeat center;background-size: cover;}
+#reg header div{margin: 0 auto;width: 50%;text-align: center;}
+#reg .content{padding: 20px;}
+#reg .content button{width: 100%;margin: 30px 0 10px;border-radius: 5px;display: block;height: 40px;line-height: 40px;outline: 0;background-color:#FF6734;color: #fff;}
+#reg .content button:active{opacity: .8}
+#reg .content .tit{height: 20px;line-height: 20px; color:#999;}
+#reg .content .in{margin-top: 30px;}
+#reg .content .in input{outline: 0;border-bottom: 1px solid #ddd;width: 100%;margin-top: 35px;height: 40px;}
+#reg .content .in input:focus{border-bottom: 1px solid #FF6734;}
+#reg .content .in input[name="phone"]{width: 70%;}
+#reg .content .in button{width: 30%;display: inline-block;background-color: #fff;color: #666;border: 1px solid #999;margin:0;}
+
+#fgt header{height: 50px;line-height: 50px;border-bottom: 1px solid #efefef;position: relative;}
+#fgt header span{position: absolute;left: 0;height: 100%;width: 50px;}
+#fgt header span i{position: absolute;left: 10px;top: 15px;height: 25px;width: 25px;background: url(../icon/back.png)no-repeat center;background-size: cover;}
+#fgt header div{margin: 0 auto;width: 50%;text-align: center;}
+#fgt .content{padding: 20px;}
+#fgt .content button{width: 100%;margin: 30px 0 10px;border-radius: 5px;display: block;height: 40px;line-height: 40px;outline: 0;background-color:#FF6734;color: #fff;}
+#fgt .content button:active{opacity: .8}
+#fgt .content .tit{height: 20px;line-height: 20px; color:#999;}
+#fgt .content .in{margin-top: 30px;}
+#fgt .content .in input{outline: 0;border-bottom: 1px solid #ddd;width: 100%;margin-top: 35px;height: 40px;}
+#fgt .content .in input:focus{border-bottom: 1px solid #FF6734;}
+#fgt .content .in input[name="phone"]{width: 70%;}
+#fgt .content .in button{width: 30%;display: inline-block;background-color: #fff;color: #666;border: 1px solid #999;margin:0;}

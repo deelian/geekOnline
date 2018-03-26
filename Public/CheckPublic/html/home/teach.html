@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/teach.css" />
+</head>
+
+<body>
+    <div id="teach">
+        <header>
+            <span class="back"><i></i></span>
+            <div>培训详情</div>
+        </header>
+        <div class="title">
+            <div class="top">
+                <div class="left fl"></div>
+                <div class="right fr">
+                    <p>【会员试听】2016税务稽查重点于风险防范（重庆）</p>
+                    <div>
+                        <span><i></i>974</span>
+                        <span class="orange fr">￥660</span>
+                    </div>
+                </div>
+            </div>
+            <div class="down">
+                <div class="point">
+                    <span class="clr9">课程要点：</span>
+                    <button>2016税务检查</button>
+                </div>
+                <div class="to"><span class="clr9">适用对象：</span>财务总监、财务经理、财务主管、税务总监、税务经理、税务专员</div>
+            </div>
+        </div>
+        <div class="plan"><i></i>重庆市江北区未来国际大厦<br/><br/><i></i>2017-09-10 09:00~17:00</div>
+        <div class="teacher">
+            <div class="head fs16">授课专家</div>
+            <div class="con clear">
+                <div class="left fl"></div>
+                <div class="right fr">
+                    <p class="fs16">桂杉</p>
+                    <p class="clr9">高级讲师</p>
+                    <p class="clr3">坚持以学院为中心，并且幽默风趣的讲课方式，案例教学身临其境，其知识的广博于专业的精湛收到了广大学院的一直好评</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="head fs16">课程大纲</div>
+            <div class="content">
+                <ul>
+                    <li><span class="ellipsis">第一部分&nbsp;2016年税务稽查重点与防线</span><i class="fr"><img src="../../icon/more_unfold.png"/></i></li>
+                    <div>1.今年汇算清缴的变化 2.税收政策风险提示服务 3.逻辑性校验规则举例 4.大数据基础 5.财税人员的危机 6.我们该何去何从？
+                    </div>
+                </ul>
+                <ul>
+                    <li><span class="ellipsis">第二部分&nbsp;2016年税务稽查重点与方法技巧</span><i class="fr"><img src="../../icon/more_unfold.png"/></i></li>
+                    <div>1.汇算清缴是怎么回事？ 2.41+1张申报表结构 3.表单编号解析 4.什么是关联企业？ 5.企业基础信息表风险点提醒 6.期间费用明细表风险点提醒 7.纳税调整项目明细表风险点提醒 8.视同销售案例 9.房开企业特定业务案例 10.跨期收取的租金、利息等案例 11.分期收款案例 12.弥补亏损案例
+                    </div>
+                </ul>
+                <ul>
+                    <li><span class="ellipsis">第三部分&nbsp;2016年税务稽查重点与防线</span><i class="fr"><img src="../../icon/more_unfold.png"/></i></li>
+                    <div>1.小微企业增值税免征额是否缴纳企业所得税 2.固定资产怎么定义？ 3.加速折旧一定对企业有利？ 4.企业所得税预缴时不可以弥补以前年度亏损 5.核定征收的企业怎么补亏？
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="good">
+          <div class="head fs16">课程收益</div>
+          <div class="content">
+            <ul>
+              <li>
+                <p class="orange fs16"><i></i>排除潜在风险</p>
+                <p class="clr6 fs16">掌握风险雷区，降低被税务稽查、纳税风险提示等</p>
+              </li>
+              <li>
+                <p class="orange fs16"><i></i>排除潜在风险</p>
+                <p class="clr6 fs16">掌握风险雷区，降低被税务稽查、纳税风险提示等</p>
+              </li>
+              <li>
+                <p class="orange fs16"><i></i>排除潜在风险</p>
+                <p class="clr6 fs16">掌握风险雷区，降低被税务稽查、纳税风险提示等</p>
+              </li>
+              <li>
+                <p class="orange fs16"><i></i>排除潜在风险</p>
+                <p class="clr6 fs16">掌握风险雷区，降低被税务稽查、纳税风险提示等</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          <div class="white">去报名</div>
+        </footer>
+    </div>
+
+    <script src="../../script/api.js"></script>
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+    $(function(){
+        
+    $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('footer .white').click(function(){
+        window.location.href = 'sign.html';
+      });
+        var flag = [0,0,0];
+    $('.about .content li').each(function(i){
+        $(this).on('click',function(){
+            if(flag[i] === 0){
+                $(this).find('img').attr('src','../../icon/less.png');
+                flag[i] = 1;
+            }else{
+                $(this).find('img').attr('src','../../icon/more_unfold.png');
+                flag[i] = 0;
+            }
+           $(this).siblings().toggle();
+    });
+    })
+})
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+#product{background-color: #EEF1F6;}
+#product header{position: fixed;width: 100%;height:50px;padding: 0 10px;top: 0;line-height: 50px;background-color: #fff;z-index: 10;border-bottom: 1px solid #efefef;box-sizing: border-box;}
+#product header .tab{width: 50%;text-align: center;margin: 0 auto;}
+#product .content{margin-bottom: 10px;background-color: #fff;padding-top: 60px;}
+#product .content .mod{border-bottom: 10px solid #efefef;padding: 10px;}
+#product .content .mod:last-child{border-bottom: 0;}
+#product .content .mod .title{margin-bottom: 10px;}
+#product .content .mod .list{display: flex;display: -webkit-flex;flex-wrap: wrap;}
+#product .content .mod .list .info{display: flex;display: -webkit-flex;flex-direction: column;;justify-content: space-around;align-items: center;flex: 0 0 33.333%;height: 100px;}
+#product .content .mod .list .info img{width: 40%;height: 50%;}

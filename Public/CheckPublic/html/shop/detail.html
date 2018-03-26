@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/detail.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+    <div id="detail">
+      <header>
+        <span class="back"><i></i></span>
+        <div class="tab">
+          <span class="fs16">商品详情</span>
+        </div>
+      </header>
+      <div class="content">
+        <div class="banner"><img src="../../image/detail.jpg" alt=""></div>
+        <div class="desc">
+          <div class="title fs20">智能记账</div>
+          <div class="info">专业代账：为代理记录行业量身定制，让工作更简单</div>
+          <div class="info">高校高能：全键盘录入，自动化生成，工作效率至少提升60%</div>
+          <div class="cost">￥666</div>
+          <div class="tag"><button>积分专属商品</button></div>
+          <div class="group">
+            <div class="pic"></div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <button class="fr buy">立即购买</button>
+        <button class="fr car">加入购物车</button>
+        <div class="other">
+          <span class="store">收藏</span>
+          <span class="num">未加入</span>
+        </div>
+      </footer>
+    </div>
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+      $(function(){
+        var flag = 0;
+        $('footer .car').click(function(){
+          $('footer .other .num').html('已加入').addClass('orange');
+        });
+        $('footer .num').click(function(event){
+           window.location.href = 'car.html';
+        });
+        $('footer .store').click(function(){
+          if(flag == 0){
+            $(this).text('已收藏').addClass('orange');
+            flag = 1;
+          }else{
+            $(this).text('收藏').removeClass('orange');
+            flag = 0;
+          }
+        });
+        $('header .back').click(function(){
+        window.history.go(-1);
+        });
+        $('footer .buy').click(function(){
+          window.location.href = 'pay.html';
+        })
+      })
+    </script>
+</body>
+</html>

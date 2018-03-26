@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/setting/orderDetail.css" />
+</head>
+
+<body>
+    <div id="orderDetail">
+        <header>
+            <span class="back"><i></i></span>
+            <div>订单详情</div>
+        </header>
+        <div class="state">订单已关闭</div>
+        <div class="content">
+            <div class="section">
+                <p class="fs12">订单编号:c20170460379764</p>
+                <p class="fs12">创建时间:2017-04-01&nbsp;14:20</p>
+            </div>
+            <div class="section clear">
+                <div class="left fl"><img src="../../image/wangke4.jpg" alt=""></div>
+                <div class="right fr">
+                    <p class="fs16">过节发放购物卡的“财于税”</p>
+                    <p class="orange fr">￥6.00</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="num clear">
+                    <span class="fl fs16">购买数量</span>
+                    <span class="fr fs16">1</span>
+                </div>
+                <div class="all">合计金额&nbsp;<span class="orange">￥6.00</span></div>
+            </div>
+            <div class="section">
+                <div class="phone">
+                    <p class="fs16">101 101 101</p>
+                    <p class="fs12">如果你对订单有任何问题，欢迎拨打服务热线</p>
+                </div>
+            </div>
+        </div>
+        <footer>查看网课</footer>
+    </div>
+
+    <script src="../../script/jquery.min.js"></script>
+    <script>
+    $('header .back').click(function(){
+        window.history.go(-1);
+      });
+    $('footer').click(function(){
+        window.location.href = '../home/video.html';
+    })
+    </script>
+</body>
+
+</html>

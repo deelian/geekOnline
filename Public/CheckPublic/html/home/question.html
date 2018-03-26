@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>提问</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/home/question.css" />
+</head>
+<body>
+  <div id="que">
+    <header>
+      <span class="back"><i></i></span>
+      <div>提问</div>
+    </header>
+    <div class="mod">
+      <div class="logo">
+        <div class="pic">
+          <img src="../../icon/peixun.png" alt="">
+          <span>政策咨询</span>
+        </div>
+        <p class="info">中国会计师、税务会计师，著名企业税收风险防范专家，兼任全国财税实践岗位能力培训资格考试管理组组长</p>
+        <span class="cost">50元/次</span>
+      </div>
+      
+    </div>
+    <div class="ask">
+      <p><span style="color:#ff6734">60</span>已回答</p>
+      <textarea class="question" placeholder="问题尽量描述清楚哦"></textarea>
+      <button>提问</button>
+    </div>
+    <div class="had">
+      <span>已解决的问题</span>
+      <ul>
+        <li>我们是一所独立学校，之前是在地税税务登记有部分设计房屋出租情况，在地税代开发票。缴各种税款。营改增后，对大学有什么影响？</li>
+        <li>我们是一所独立学校，之前是在地税税务登记有部分设计房屋出租情况，在地税代开发票。缴各种税款。营改增后，对大学有什么影响？</li>
+        <li>我们是一所独立学校，之前是在地税税务登记有部分设计房屋出租情况，在地税代开发票。缴各种税款。营改增后，对大学有什么影响？</li>
+      </ul>
+    </div>
+  </div>
+  <script src="../../script/jquery.min.js"></script>
+  <script>
+  $('header .back').click(function(){
+        window.history.go(-1);
+      });
+  $('.ask button').click(function(){
+    window.location.href = '../shop/pay.html';
+  });
+  $('#que .had li').each(function(){
+    $(this).on('click',function(){
+      window.location.href = 'problem.html';
+    })
+  })
+  </script>
+</body>
+</html>
