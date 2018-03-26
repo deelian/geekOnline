@@ -5,11 +5,11 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
-    public function __construct()
-    {
-        // ini_set('max_execution_time', 0);
-        set_time_limit(0);
-    }
+//    public function __construct()
+//    {
+//        // ini_set('max_execution_time', 0);
+//        set_time_limit(0);
+//    }
 
     public function loadOnline()
     {
