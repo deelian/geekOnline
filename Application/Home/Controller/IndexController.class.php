@@ -77,6 +77,6 @@ class IndexController extends Controller
 
     public function test()
     {
-        mkdir('pathname');
+        echo 'ctli':
     }
 }
