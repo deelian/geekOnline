@@ -5,11 +5,10 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
-//    public function __construct()
-//    {
-//        // ini_set('max_execution_time', 0);
-//        set_time_limit(0);
-//    }
+    public function __construct()
+    {
+        set_time_limit(0);
+    }
 
     public function loadOnline()
     {
@@ -72,11 +71,40 @@ class IndexController extends Controller
                 }
             }
         }
-        // $this->display();
     }
 
-    public function test()
+    public function downLoad(){
+//        $bc = new execBt();
+        $bc = new \Org\Util\ExecBt();
+        //使用实例
+//        $s = myFunc::curl($url);
+        $bc->init();
+        $bc->decode($s, strlen($s));
+        $info = array();
+        if (is_object($bc->y)) {
+            if(property_exists($bc->y->info, 'files')){
+                $res = $bc->y->info->files;
+                foreach ($res as $v) {
+                    foreach ($v as $key => $value) {
+                        if ($key == 'path.utf-8') {
+                            if (!strstr($value[0], '如果您看到此文件')) {
+                                if (!empty($value[1])) {
+                                    $value[0] = $value[0].'/'.$value[1];
+                                }
+                                array_push($info, $value[0]);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    public function indexer()
     {
-        echo 'ctli';
+        $res    = M('bt','my_','DB_OLD2');
+        $list   =   $res->where(['id'=>['lt',100]])->select();
+        p($list);
     }
 }

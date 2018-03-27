@@ -122,3 +122,47 @@ function tree($directory)
     echo "</ul>\n";
     $mydir->close();
 }
+function httpsPost($url,$post_data){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    // post数据
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); // https请求 不验证证书和hosts
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    // post的变量
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    $output=json_decode(curl_exec($ch),true);
+    curl_close($ch);
+    return $output;
+}
+function httpsGet($url){
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);// https请求不验证证书和hosts
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    $res=json_decode(curl_exec($curl),true);
+    curl_close($curl);
+    return $res;
+}
+function httpPost($url,$post_data){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    // post数据
+    curl_setopt($ch, CURLOPT_POST, 1);
+    // post的变量
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    $output=json_decode(curl_exec($ch),true);
+    curl_close($ch);
+    return $data;
+}
+function httpGet($url){
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    $res=json_decode(curl_exec($curl),true);
+    curl_close($curl);
+    return $res;
+}

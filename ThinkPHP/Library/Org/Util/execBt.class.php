@@ -13,7 +13,7 @@ namespace Org\Util;
  *
  * All Copyrights 2007 - 2014 Fenying Studio Reserved.
  */
-class execBt
+class ExecBt
 {
     const READY = 0;
     const READ_STR = 1;
