@@ -13,15 +13,33 @@ use Think\Controller;
 
 class GetdescController extends Controller
 {
-    public function insertDesc(){
+    public function insertDesc($num){
+        set_time_limit(0);
         $res    = M('res');
-        $start  = $res->where(['res_desc'=>''])->limit(10)->select();
-        $sId    = $start[0]['id'];
-        for($i=$sId; $i<$sId+11; $i++){
+        $start  = $res->where(['res_desc'=>''])->limit($num)->select();
+//        for($i=$sId; $i<$sId+11; $i++){
+//
+//        }
+        $i = 0;
+        foreach ($start as $v){
+            if ($v['res_dirs'] == 'btsdee'){
+                $url    = 'http://oov8vybfo.bkt.clouddn.com/btsdee/'.$v['res_links'];
+            }else{
+                $url    = "http://p6arf67yc.bkt.clouddn.com/".$v['res_dirs']."/".$v['res_links'];
+            }
 
+            $desc   = $this->getDesc($url);
+            if($desc == 'null'){
+                $desc = $v['res_name'];
+            }
+            $insertDesc     = $res->where(['id' => $v['id']])->save(['res_desc' => $desc]);
+            if ($insertDesc){
+                $i++;
+                $insertId   = $v['id'];
+            }
         }
-
-        $desc   = $this->getDesc($url);
+        pLog("total success: $i,insert_last_id: $insertId", 'insertRes', 'insert.Log');
+        p("total success: $i,insert_last_id: $insertId");
 
     }
 
@@ -31,7 +49,7 @@ class GetdescController extends Controller
         $bc = new \Org\Util\ExecBt();
         //使用实例
         $s = curl($url);
-//        $s  =   curl('http://oov8vybfo.bkt.clouddn.com/btsdee/149295965216750.torrent');
+//        $s  =   curl('http://oov8vybfo.bkt.clouddn.com/btsdee/149295863683512.torrent');
         $bc->init();
         $bc->decode($s, strlen($s));
         $info = array();
@@ -62,8 +80,10 @@ class GetdescController extends Controller
             }
 
         }
-
-//        var_dump($res);
+        if($res==''){
+            $res    = 'null';
+        }
+//        p($res);
         return $res;
     }
 }
