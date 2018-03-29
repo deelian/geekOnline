@@ -47,11 +47,15 @@ class GetdescController extends Controller
         utf8();
 //        $bc = new execBt();
         $bc = new \Org\Util\ExecBt();
+
         //使用实例
         $s  = curl($url);
+
 //        $s  =   curl('http://oov8vybfo.bkt.clouddn.com/btsdee/149295863683512.torrent');
         $bc->init();
         $bc->decode($s, strlen($s));
+//        p($bc,1);
+
         $info = array();
         if (is_object($bc->y)) {
             if(property_exists($bc->y->info, 'files')){
