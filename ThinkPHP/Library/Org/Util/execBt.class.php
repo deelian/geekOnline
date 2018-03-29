@@ -15,12 +15,12 @@ namespace Org\Util;
  */
 class ExecBt
 {
-    const READY = 0;
-    const READ_STR = 1;
+    const READY     = 0;
+    const READ_STR  = 1;
     const READ_DICT = 2;
     const READ_LIST = 3;
-    const READ_INT = 4;
-    const READ_KEY = 5;
+    const READ_INT  = 4;
+    const READ_KEY  = 5;
     public $y;
     protected $z, $m, $n;
     protected $stat;

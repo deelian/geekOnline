@@ -48,7 +48,7 @@ class GetdescController extends Controller
 //        $bc = new execBt();
         $bc = new \Org\Util\ExecBt();
         //使用实例
-        $s = curl($url);
+        $s  = curl($url);
 //        $s  =   curl('http://oov8vybfo.bkt.clouddn.com/btsdee/149295863683512.torrent');
         $bc->init();
         $bc->decode($s, strlen($s));
