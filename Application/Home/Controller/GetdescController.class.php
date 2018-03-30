@@ -13,6 +13,58 @@ use Think\Controller;
 
 class GetdescController extends Controller
 {
+    public function insertDescNewWay($num){
+        set_time_limit(0);
+        $res    = M('res');
+        $start  = $res->where(['res_desc'=>''])->limit($num)->select();
+        utf8();
+        $i = 0;
+        foreach ($start as $v){
+//            p("http://p6arf67yc.bkt.clouddn.com/".$v['res_dirs']."/".$v['res_links']);
+            $postData = [
+//                'data'          => 'http://p6arf67yc.bkt.clouddn.com/Games/10071522247489.torrent',
+                'data'          => "http://p6arf67yc.bkt.clouddn.com/".$v['res_dirs']."/".$v['res_links'],
+                'type'          => 'torrentinfo',
+                'arg'           => '',
+                'beforeSend'    => 'undefined'
+            ];
+            $re     = httpsPost('http://tool.chacuo.net/commontorrentinfo', $postData);
+            $a      = explode('<h3>包含文件清单</h3>', $re['data'][0]);
+            if ($a[1] == '<table></table>'){
+                $c = 'null';
+            } else {
+                $c =     str_replace('<table>', '', $a[1]);
+                $c =     str_replace('</table>', '', $c);
+                $c =     str_replace('</td></tr>', '|', $c);
+                $c =     str_replace('<tr><th>', '', $c);
+                $c =     str_replace('</th><td>', '/', $c);
+            }
+            if ($c == 'null'){
+                $desc   = $v['res_name'];
+            } else {
+                $desc   = $c;
+            }
+
+            $insertDesc     = $res->where(['id' => $v['id']])->save(['res_desc' => $desc]);
+            if ($insertDesc){
+                $i++;
+                $insertId   = $v['id'];
+            }
+
+        }
+
+        pLog("total success: $i,insert_last_id: $insertId", 'insertRes', 'insert.Log');
+        p("total success: $i,insert_last_id: $insertId");
+
+    }
+
+    public function setNull(){
+        $res    = M('res');
+        $where['id']   = ['gt',0];
+        $res->where($where)->save(['res_desc'=>'']);
+        pLog($res->getLastSql());
+    }
+
     public function insertDesc($num){
         set_time_limit(0);
         $res    = M('res');
