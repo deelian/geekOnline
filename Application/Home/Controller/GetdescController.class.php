@@ -16,7 +16,12 @@ class GetdescController extends Controller
     public function insertDescNewWay($num){
         set_time_limit(0);
         $res    = M('res');
-        $start  = $res->where(['res_desc'=>''])->limit($num)->select();
+        $where['res_desc']  = ['neq', ''];
+        $startId  = $res->where($where)->max('id');
+
+        $staertMap['id'] =   ['gt', $startId];
+        $start      = $res->where($staertMap)->limit($num)->select();
+        p($start,1);
         utf8();
         $i = 0;
         foreach ($start as $v){
