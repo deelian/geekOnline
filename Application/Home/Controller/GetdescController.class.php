@@ -32,6 +32,11 @@ class GetdescController extends Controller
                 'arg'           => '',
                 'beforeSend'    => 'undefined'
             ];
+
+            if($v['res_dirs'] == 'btsdee'){
+                $postData['data']   = "http://oov8vybfo.bkt.clouddn.com/".$v['res_dirs']."/".$v['res_links'];
+            }
+
             $re     = httpsPost('http://tool.chacuo.net/commontorrentinfo', $postData);
             $a      = explode('<h3>包含文件清单</h3>', $re['data'][0]);
             if ($a[1] == '<table></table>'){
