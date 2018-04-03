@@ -53,7 +53,9 @@ class GetdescController extends Controller
             } else {
                 $desc   = $c;
             }
-
+            if(strlen($desc) >= 65530){
+                $desc   = substr($desc, 0, 65530);
+            }
             $insertDesc     = $res->where(['id' => $v['id']])->save(['res_desc' => $desc]);
             if ($insertDesc){
                 $i++;
