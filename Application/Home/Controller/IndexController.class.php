@@ -11,11 +11,12 @@ class IndexController extends Controller
     }
 
     public function index(){
-        p(I(), 1);
         require_once '/usr/local/xunsearch/sdk/php/lib/XS.php';
 
         $total_begin = microtime(true);
         $xs = new XS('xiakexing');
+        p($xs);
+        p(I(), 1);
         $search = $xs->search;
         $search->setCharset('UTF-8');
         $q  = I('q');
