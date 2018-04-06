@@ -16,7 +16,9 @@ class IndexController extends Controller
         $total_begin = microtime(true);
         $xs = new \XS('xiakexing');
         p($xs);
-        p(I(), 1);
+        p(I());
+        extract(I());
+        p($p, 1);
         $search = $xs->search;
         $search->setCharset('UTF-8');
         $q  = I('q');
