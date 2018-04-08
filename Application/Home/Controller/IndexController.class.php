@@ -62,11 +62,14 @@ class IndexController extends Controller
             $docs = $search->search();
             $search_cost = microtime(true) - $search_begin;
 
-            p($docs);
-
             // get other result
             $count = $search->getLastCount();
             $total = $search->getDbTotal();
+
+            p($search_cost, 0, 'costTime');
+            p($count, 0, '$count');
+            p($total, 0, '$total');
+            p($docs);
 
             if ($xml !== 'yes') {
                 // try to corrected, if resul too few
