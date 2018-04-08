@@ -18,6 +18,7 @@ class IndexController extends Controller
 //        p($xs);
         p(I());
 
+        $search = $xs->search;
         $hot = $search->getHotQuery();
         p($hot);
         extract(I());
@@ -27,7 +28,6 @@ class IndexController extends Controller
         $s = 'relevance';
         $f = '_all';
 
-        $search = $xs->search;
         $search->setCharset('UTF-8');
         $q  = I('q');
 
