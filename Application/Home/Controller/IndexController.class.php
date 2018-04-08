@@ -54,7 +54,7 @@ class IndexController extends Controller
 
             // set offset, limit
             $p = max(1, intval($p));
-            $n = XSSearch::PAGE_SIZE;
+            $n = \XSSearch::PAGE_SIZE;
             $search->setLimit($n, ($p - 1) * $n);
 
             // get the result
