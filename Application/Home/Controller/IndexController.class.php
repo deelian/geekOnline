@@ -17,8 +17,8 @@ class IndexController extends Controller
         $xs = new \XS('xiakexing');
 //        p($xs);
 //        p(I());
-//        extract(I());
-//        p($p, 1);
+        extract(I());
+        p($p, 1);
 
 
         $s = 'relevance';
