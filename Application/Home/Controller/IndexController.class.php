@@ -18,7 +18,7 @@ class IndexController extends Controller
 //        p($xs);
 //        p(I());
         extract(I());
-        p($p, 1);
+//        p($p, 1);
 
 
         $s = 'relevance';
