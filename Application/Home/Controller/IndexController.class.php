@@ -5,15 +5,24 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
-    public function __construct()
-    {
-        set_time_limit(0);
-    }
+//    public function __construct()
+//    {
+//        set_time_limit(0);
+//    }
 
     public function index(){
         require_once '/usr/local/xunsearch/sdk/php/lib/XS.php';
+        $xs = new \XS('xiakexing');
+        $search = $xs->search;
 
-        $total_begin = microtime(true);
+        $hot = $search->getHotQuery();
+        $this->assign('hotKw', $hot);
+        $this->display();
+    }
+
+    public function search(){
+        require_once '/usr/local/xunsearch/sdk/php/lib/XS.php';
+
         $xs = new \XS('xiakexing');
 //        p($xs);
 //        p(I());
