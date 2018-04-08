@@ -17,7 +17,7 @@ class IndexController extends Controller
         $xs = new \XS('xiakexing');
 //        p($xs);
 //        p(I());
-        extract(I());
+//        extract(I());
 //        p($p, 1);
 
 
@@ -27,6 +27,7 @@ class IndexController extends Controller
         $search = $xs->search;
         $search->setCharset('UTF-8');
         $q  = I('q');
+        $p  = I('p');
 
         if (empty($q)) {
             // just show hot query
@@ -69,6 +70,9 @@ class IndexController extends Controller
             p($search_cost, 0, 'costTime');
             p($count, 0, '$count');
             p($total, 0, '$total');
+            foreach ($docs as $list){
+                p($list->id);
+            }
             p($docs);
 
             if ($xml !== 'yes') {
