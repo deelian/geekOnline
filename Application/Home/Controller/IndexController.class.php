@@ -15,10 +15,18 @@ class IndexController extends Controller
 
         $total_begin = microtime(true);
         $xs = new \XS('xiakexing');
-        p($xs);
+//        p($xs);
         p(I());
+
+        $hot = $search->getHotQuery();
+        p($hot);
         extract(I());
         p($p, 1);
+
+
+        $s = 'relevance';
+        $f = '_all';
+
         $search = $xs->search;
         $search->setCharset('UTF-8');
         $q  = I('q');
